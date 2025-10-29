@@ -6,6 +6,7 @@
   --title_color: #1a1a1a;
   --light_purple: #e1bee7;
   --grey_color: #616161;
+  --white_alt_color: #f7f7f7;
 
   /* FONTS */
   --text_fs: 1rem;
@@ -70,6 +71,16 @@ html {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.width_80 {
+  max-width: 80%;
 }
 
 .hero_title {
@@ -209,6 +220,12 @@ html {
   background-color: var(--light_purple);
 }
 
+@media screen and (max-width: 768px) {
+  .width_80 {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .hero_title {
     font-size: 3rem;
@@ -235,8 +252,13 @@ html {
   .sub_section_title {
     font-size: 1.3rem;
   }
-  
+
   .section {
     padding: 4.5rem 0;
+  }
+
+  .grid_container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 }

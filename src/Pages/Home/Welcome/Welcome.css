@@ -3,9 +3,6 @@
 }
 
 .home_welcome_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
   align-items: center;
 }
 
@@ -13,21 +10,10 @@
   color: var(--purple_color);
 }
 
-.home_welcome_contents,
-.home_welcome_headers {
-  max-width: 80%;
+.home_welcome_contents p {
+  font-size: 1rem;
+  font-weight: 100;
 }
 
 @media screen and (max-width: 1024px) {
-  .home_welcome_contents,
-  .home_welcome_headers {
-    max-width: 100%;
-  }
 }
-
-@media screen and (max-width: 768px) {
-.home_welcome_container{
-    grid-template-columns: 1fr;
-}
-}
-

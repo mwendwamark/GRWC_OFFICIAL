@@ -4,6 +4,8 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Welcome from "./Welcome/Welcome";
 import About from "./About/About";
 import Services from "./Services/Services";
+import Contacts from "./Contacts/Contacts";
+import InfiniteScroll from "./Scroll/InfiniteScroll";
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
         <Welcome />
         <About />
         <Services />
+        <Contacts />
+        <InfiniteScroll />
       </div>
     </>
   );

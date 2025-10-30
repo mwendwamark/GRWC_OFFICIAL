@@ -100,7 +100,7 @@
 .home_services_kids > p {
   color: var(--text_color);
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 /* Add a subtle card effect on larger screens */

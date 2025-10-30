@@ -1,0 +1,151 @@
+.infinite_scroll_section {
+  background-color: var(--white_alt_color);
+  overflow: hidden;
+}
+
+.infinite_scroll_container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.infinite_scroll_headers {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Wrapper - hides overflow */
+.infinite_scroll_wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 3rem 0;
+}
+
+/* Track - contains all items */
+.infinite_scroll_track {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: fit-content;
+  animation: scroll 40s linear infinite;
+}
+
+/* Pause animation on hover */
+.infinite_scroll_track:hover {
+  animation-play-state: paused;
+}
+
+/* Individual item container */
+.infinite_scroll_item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 8px; */
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Landscape orientation - wider, shorter */
+.infinite_scroll_item.landscape {
+  width: 480px;
+  height: 320px;
+}
+
+/* Portrait orientation - narrower, taller */
+.infinite_scroll_item.portrait {
+  width: 380px;
+  height: 480px;
+}
+
+/* Hover effect */
+.infinite_scroll_item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(156, 39, 176, 0.2);
+}
+
+/* Image styling */
+.infinite_scroll_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.infinite_scroll_item:hover img {
+  transform: scale(1.05);
+}
+
+/* Keyframe animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1000px) {
+  .infinite_scroll_track {
+    gap: 1.25rem;
+    animation-duration: 40s;
+  }
+
+  .infinite_scroll_item.portrait,
+  .infinite_scroll_item.landscape {
+    width: 340px;
+    height: 340px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .infinite_scroll_wrapper {
+    padding: 2rem 0;
+  }
+
+  .infinite_scroll_wrapper::before,
+  .infinite_scroll_wrapper::after {
+    width: 100px;
+  }
+
+  .infinite_scroll_track {
+    gap: 1rem;
+    animation-duration: 35s;
+  }
+
+   .infinite_scroll_item.portrait,
+  .infinite_scroll_item.landscape {
+    width: 320px;
+    height: 320px;
+  }
+  .infinite_scroll_item:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .infinite_scroll_wrapper {
+    padding: 1.5rem 0;
+  }
+
+  .infinite_scroll_wrapper::before,
+  .infinite_scroll_wrapper::after {
+    width: 60px;
+  }
+
+  .infinite_scroll_track {
+    gap: 0.75rem;
+    animation-duration: 30s;
+  }
+
+   .infinite_scroll_item.portrait,
+  .infinite_scroll_item.landscape {
+    width: 280px;
+    height: 280px;
+  }
+}

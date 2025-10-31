@@ -223,7 +223,7 @@ const Navbar = () => {
                     aria-label="Go to Contact page"
                     to="/contact"
                     onClick={closeMobileMenu}
-                    className="navbar__menu-lin btn btn_purple_outline"
+                    className="navbar__menu-lin btn btn_purple"
                   >
                     Contact
                   </NavLink>

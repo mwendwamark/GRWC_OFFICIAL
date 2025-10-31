@@ -4,11 +4,13 @@ import Home from "./Pages/Home/Home";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Home />} path="/"></Route>
-      </Routes>
-    </BrowserRouter>
+    <main>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Home />} path="/"></Route>
+        </Routes>
+      </BrowserRouter>
+    </main>
   );
 };
 

@@ -1,0 +1,197 @@
+.welcome_message_section {
+  padding: 8rem 0;
+}
+
+.welcome_message_card {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 4rem;
+  background-color: var(--bg_color);
+  overflow: hidden;
+}
+
+.welcome_visual_column {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+}
+
+.bishop_image_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bishop_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.large_quote_icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--light_purple);
+  opacity: 0.4;
+  z-index: 10;
+  transform: rotate(180deg);
+}
+
+.welcome_text_column {
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.message_headers {
+  margin-bottom: 2rem;
+}
+
+.welcome_title {
+  color: var(--title_color);
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.bishop_message_body {
+  margin-bottom: 2rem;
+}
+
+.main_quote_text {
+  font-size: var(--sub_section_fs);
+  font-family: var(--title_ff);
+  font-weight: 500;
+  color: var(--title_color);
+
+  border-left: 5px solid var(--purple_color);
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.message_description {
+  color: var(--text_color);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.message_signature_block {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+
+.signature_line {
+  width: 80px;
+  height: 2px;
+  background-color: var(--light_purple);
+  margin-bottom: 0.75rem;
+}
+
+.signature_name {
+  font-family: var(--title_ff);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--title_color);
+  margin-bottom: 0.25rem;
+}
+
+.signature_title {
+  font-size: 0.95rem;
+  color: var(--grey_color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.church_stats_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  margin-top: 2rem;
+  background-color: var(--bg_color);
+  border: 1px solid var(--white_alt_color);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.stat_item {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.stat_number {
+  font-size: 2rem;
+  font-family: var(--title_ff);
+  font-weight: 700;
+  color: var(--purple_color);
+  display: block;
+  line-height: 1;
+}
+
+.stat_label {
+  font-size: 0.9rem;
+  color: var(--grey_color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+.stat_divider {
+  width: 1px;
+  height: 60px;
+  background-color: var(--white_alt_color);
+  margin: 0 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .welcome_message_card {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .welcome_visual_column {
+    min-height: 300px;
+  }
+
+  .large_quote_icon {
+    size: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.15;
+  }
+
+  .church_stats_bar {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .stat_divider {
+    width: 80%;
+    height: 1px;
+    margin: 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .welcome_text_column {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .main_quote_text {
+    font-size: 1.25rem;
+    padding-left: 1rem;
+  }
+
+  .church_stats_bar {
+    padding: 1.5rem;
+  }
+}

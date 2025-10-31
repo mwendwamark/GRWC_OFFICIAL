@@ -6,6 +6,7 @@ import About from "./About/About";
 import Services from "./Services/Services";
 import Contacts from "./Contacts/Contacts";
 import InfiniteScroll from "./Scroll/InfiniteScroll";
+import CTA from "./CTA/CTA";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <Services />
         <Contacts />
         <InfiniteScroll />
+        <CTA />
       </div>
     </>
   );

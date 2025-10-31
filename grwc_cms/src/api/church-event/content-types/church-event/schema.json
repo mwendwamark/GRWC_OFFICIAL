@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "church_events",
+  "info": {
+    "singularName": "church-event",
+    "pluralName": "church-events",
+    "displayName": "Church-event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventTitle": {
+      "type": "string"
+    },
+    "eventDetails": {
+      "type": "blocks"
+    },
+    "eventSummary": {
+      "type": "string"
+    },
+    "eventDate": {
+      "type": "datetime"
+    },
+    "eventCoverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "eventLocation": {
+      "type": "string"
+    },
+    "eventLeader": {
+      "type": "string"
+    },
+    "eventLeaderImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

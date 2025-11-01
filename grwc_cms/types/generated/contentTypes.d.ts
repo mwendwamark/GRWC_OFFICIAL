@@ -486,6 +486,7 @@ export interface ApiChurchEventChurchEvent extends Struct.CollectionTypeSchema {
     >;
     eventDate: Schema.Attribute.DateTime;
     eventDetails: Schema.Attribute.Blocks;
+    eventEndDate: Schema.Attribute.DateTime;
     eventLeader: Schema.Attribute.String;
     eventLeaderImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'

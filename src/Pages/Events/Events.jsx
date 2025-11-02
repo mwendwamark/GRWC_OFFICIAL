@@ -159,7 +159,7 @@ const Events = ({ events }) => {
                   return (
                     <NavLink
                       key={id}
-                      to={`/church-events/${id}`}
+                      to={`/church-events/${event.documentId}`}
                       className="events_page_card_link"
                     >
                       <div className="eventspage_card">

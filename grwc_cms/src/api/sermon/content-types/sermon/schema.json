@@ -19,7 +19,7 @@
     },
     "sermonCoverImage": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "allowedTypes": [
         "images",
         "files",
@@ -29,7 +29,7 @@
     },
     "sermonVideo": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": [
         "images",
         "files",
@@ -39,7 +39,7 @@
     },
     "preacherImage": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "allowedTypes": [
         "images",
         "files",

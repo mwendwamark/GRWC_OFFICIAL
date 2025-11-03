@@ -559,18 +559,17 @@ export interface ApiSermonSermon extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     preacher: Schema.Attribute.String;
     preacherImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
+      'images' | 'files' | 'videos' | 'audios'
     >;
     publishedAt: Schema.Attribute.DateTime;
     sermonCoverImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
+      'images' | 'files' | 'videos' | 'audios'
     >;
     sermonSummary: Schema.Attribute.String;
     sermonTitle: Schema.Attribute.String;
     sermonVideo: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
+      'images' | 'files' | 'videos' | 'audios',
+      true
     >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

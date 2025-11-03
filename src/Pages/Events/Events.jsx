@@ -76,8 +76,7 @@ const Events = ({ events }) => {
           <div className="events_page_hero grid_container">
             <div className="events_page_titles section_headers">
               <h1 className="events_page_section_title hero_title">
-                Don't miss out on the unforgettable church events that inspire
-                and unite.
+               Our inspiring church events
               </h1>
               <p className="events_page_subtitle_text width_80">
                 No matter your stage of life, there’s always a next step for

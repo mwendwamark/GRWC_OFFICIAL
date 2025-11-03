@@ -52,7 +52,7 @@ html {
 }
 
 .below_navbar {
-  padding: 7rem 0;
+  padding: 8rem 0;
 }
 
 .container {
@@ -168,7 +168,7 @@ html {
 }
 
 .btn_black_outline:hover {
-  color: var(--bg_color)!important;
+  color: var(--bg_color) !important;
   background-color: var(--title_color);
 }
 
@@ -235,6 +235,9 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+  .below_navbar {
+    padding: 9rem 0;
+  }
   .container {
     max-width: 93%;
   }

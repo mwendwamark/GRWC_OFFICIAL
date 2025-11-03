@@ -1,0 +1,396 @@
+/* Share Sermon Container */
+.sermon-share-container {
+  position: relative;
+}
+
+/* Share Button */
+.sermon-share-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--grey_color);
+  color: var(--title_color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--title_ff);
+  width: 100%;
+}
+
+.sermon-share-button:hover {
+  background: var(--white_alt_color);
+  border-color: var(--title_color);
+}
+
+.sermon-share-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Share Overlay */
+.share-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 26, 26, 0.7);
+  z-index: 999;
+  animation: share_overlay_fade_in 0.2s ease;
+}
+
+@keyframes share_overlay_fade_in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Expanded Share Container */
+.sermon-share-container.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg_color);
+  border: 1px solid var(--white_alt_color);
+  padding: 2rem;
+  z-index: 1000;
+  min-width: 90%;
+  max-width: 500px;
+  animation: share_modal_slide_up 0.3s ease;
+}
+
+@keyframes share_modal_slide_up {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Share Header */
+.sermon-share-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--white_alt_color);
+}
+
+.sermon-share-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--title_color);
+  margin: 0;
+  font-family: var(--title_ff);
+}
+
+.share-close-button {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--grey_color);
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.share-close-button:hover {
+  color: var(--title_color);
+  transform: rotate(90deg);
+}
+
+/* Share Buttons Grid */
+.sermon-share-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.share-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--title_color);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--text_ff);
+  text-decoration: none;
+  width: 100%;
+}
+
+.share-button svg {
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  border-radius: 50%;
+  background: var(--white_alt_color);
+  transition: all 0.3s ease;
+}
+
+.share-button span {
+  text-align: center;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.share-button:hover svg {
+  transform: scale(1.1);
+}
+
+/* Individual Share Button Colors */
+.share-button.whatsapp svg {
+  background: #E7F8EF;
+  color: #25D366;
+}
+
+.share-button.facebook svg {
+  background: #E7F1FB;
+  color: #1877F2;
+}
+
+.share-button.email svg {
+  background: #F3E8F8;
+  color: var(--purple_color);
+}
+
+.share-button.instagram svg {
+  background: #FCE8ED;
+  color: #E4405F;
+}
+
+.share-button.twitter svg {
+  background: #E5F4FD;
+  color: #1DA1F2;
+}
+
+.share-button.copy-link svg {
+  background: var(--white_alt_color);
+  color: var(--title_color);
+}
+
+.share-button:hover.whatsapp svg {
+  background: #25D366;
+  color: #ffffff;
+}
+
+.share-button:hover.facebook svg {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.share-button:hover.email svg {
+  background: var(--purple_color);
+  color: #ffffff;
+}
+
+.share-button:hover.instagram svg {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.share-button:hover.twitter svg {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.share-button:hover.copy-link svg {
+  background: var(--title_color);
+  color: #ffffff;
+}
+
+/* Page Link Section */
+.sermon-share-page-link {
+  border-top: 1px solid var(--white_alt_color);
+  padding-top: 1.5rem;
+}
+
+.sermon-share-page-link h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--title_color);
+  margin: 0 0 1rem 0;
+  font-family: var(--title_ff);
+}
+
+.sermon-share-link-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: var(--white_alt_color);
+  border: 1px solid var(--white_alt_color);
+}
+
+.sermon-share-link-text {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--grey_color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--text_ff);
+}
+
+.sermon-share-copy-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--grey_color);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.sermon-share-copy-icon:hover {
+  color: var(--title_color);
+}
+
+/* Toast Container Overrides */
+.Toastify__toast-container {
+  font-family: var(--text_ff);
+}
+
+.Toastify__toast {
+  font-size: 0.9375rem;
+  font-family: var(--text_ff);
+}
+
+.Toastify__toast--success {
+  background-color: var(--purple_color);
+}
+
+.Toastify__toast--info {
+  background-color: var(--title_color);
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .sermon-share-container.expanded {
+    min-width: 85%;
+    padding: 1.5rem;
+  }
+
+  .sermon-share-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .sermon-share-title {
+    font-size: 1.125rem;
+  }
+
+  .sermon-share-buttons {
+    grid-template-columns: repeat(4, 100px);
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .share-button svg {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+  }
+
+  .share-button span {
+    font-size: 0.75rem;
+  }
+
+  .sermon-share-page-link {
+    padding-top: 1.25rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .sermon-share-container.expanded {
+    min-width: 95%;
+    max-width: 95%;
+    padding: 1.25rem;
+  }
+
+  .sermon-share-header {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .sermon-share-title {
+    font-size: 1rem;
+  }
+
+  .sermon-share-buttons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .share-button svg {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    flex-shrink: 0;
+  }
+
+  .share-button span {
+    font-size: 0.9375rem;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  .share-close-button {
+    width: 28px;
+    height: 28px;
+    font-size: 1.75rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .share-overlay,
+  .sermon-share-container.expanded,
+  .share-button,
+  .share-close-button {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Focus Styles for Keyboard Navigation */
+.sermon-share-button:focus,
+.share-button:focus,
+.share-close-button:focus {
+  outline: 2px solid var(--purple_color);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .sermon-share-container,
+  .share-overlay {
+    display: none;
+  }
+}

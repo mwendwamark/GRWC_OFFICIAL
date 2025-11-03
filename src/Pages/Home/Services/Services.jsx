@@ -23,7 +23,7 @@ const Services = () => {
                 First Service <i>(English Service)</i>
               </h4>
               <div className="service_time">
-                <RiAlarmLine /> <p>8:00 AM ~ 10:30 AM</p>
+                <RiAlarmLine /> <p>8:00 AM ~ 10:00 AM</p>
               </div>
               <p>
                 Join our powerful English Service Every Sunday. All are welcome.
@@ -34,7 +34,7 @@ const Services = () => {
                 Second Service <i>(Swahili Service)</i>
               </h4>
               <div className="service_time">
-                <RiAlarmLine /> <p>11:00 AM ~ 01:00 AM</p>
+                <RiAlarmLine /> <p>10:15 AM ~ 01:00 PM</p>
               </div>
               <p>
                 Experience our vibrant Swahili Service and connect with the
@@ -68,6 +68,16 @@ const Services = () => {
               <h4>Sunday School Service</h4>
               <div className="service_time">
                 <RiAlarmLine /> <p>11:30 AM ~ 1:00 AM</p>
+              </div>
+              <p>
+                Join our powerful English Service Every Sunday. All are welcome.
+              </p>
+            </div>
+
+             <div className="home_services_kids">
+              <h4>New Believers (Discipleship class)</h4>
+              <div className="service_time">
+                <RiAlarmLine /> <p>9:00 AM ~ 10:30 AM</p>
               </div>
               <p>
                 Join our powerful English Service Every Sunday. All are welcome.

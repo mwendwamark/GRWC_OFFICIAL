@@ -6,6 +6,9 @@ import Events from "./Pages/Events/Events";
 import Event from "./Pages/Event/Event";
 import { getFullApiUrl } from "./Utils/apiConfig";
 import useFetch from "./Hooks/useFetch";
+import About from "./Pages/About/About";
+import Sermons from "./Pages/Sermons/Sermons";
+import Sermon from "./Pages/Sermon/Sermon";
 
 const App = () => {
   const {
@@ -30,20 +33,6 @@ const App = () => {
     return <p className="loading-message">Loading...</p>;
   }
 
-  // Display any errors
-  if (announcementsError) {
-    console.error("Error loading announcements:", announcementsError);
-  }
-
-  if (eventsError) {
-    console.error("Error loading events:", eventsError);
-  }
-
-  console.log("Sermons data:", sermonsData);
-  if (sermonsError) {
-    console.error("Error loading sermons:", sermonsError);
-  }
-
   return (
     <>
       <main>
@@ -51,11 +40,14 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route element={<Home />} path="/"></Route>
+            <Route element={<About />} />
             <Route
               path="/events"
               element={<Events events={eventsData?.data} />}
             />
             <Route path="/church-events/:id" element={<Event />} />
+            <Route path="/sermons" element={<Sermons />} />
+            <Route path="/sermons/:id" element={<Sermon />} />
           </Routes>
         </BrowserRouter>
       </main>

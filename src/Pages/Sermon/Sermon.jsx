@@ -10,6 +10,7 @@ import { RiBookOpenLine } from "@remixicon/react";
 import { RiCalendar2Line } from "@remixicon/react";
 import { RiArrowLeftLine } from "@remixicon/react";
 import { RiDownloadLine } from "@remixicon/react";
+import SecondaryNavbar from "../../Components/SecondaryNavbar/SecondaryNavbar";
 
 const renderContent = (content) => {
   if (!content || !Array.isArray(content)) return null;
@@ -179,6 +180,7 @@ const Sermon = () => {
 
   return (
     <>
+      <SecondaryNavbar />
       <Helmet>
         <title>{sermon.sermonTitle} | Gospel Revival Wave Church</title>
         <meta

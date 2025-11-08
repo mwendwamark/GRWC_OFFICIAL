@@ -26,10 +26,11 @@
 }
 
 .stat_item:first-child {
-  border-right: 1px solid var(--grey_color);
+  border-right: 1px solid #c4c7c5;
 }
+
 .stat_item:last-child {
-  border-left: 1px solid var(--grey_color);
+  border-left: 1px solid #c4c7c5;
 }
 
 @media screen and (max-width: 1000px) {
@@ -43,10 +44,10 @@
   }
   .stat_item:first-child {
     border: none;
-    border-bottom: 1px solid var(--grey_color);
+    border-bottom: 1px solid #c4c7c5;
   }
   .stat_item:last-child {
     border: none;
-    border-top: 1px solid var(--grey_color);
+    border-top: 1px solid #c4c7c5;
   }
 }

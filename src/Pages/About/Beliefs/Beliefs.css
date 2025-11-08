@@ -4,22 +4,140 @@
   gap: 4rem;
 }
 
+.about_beliefs_headers {
+  /* text-align: center; */
+  margin-bottom: 2rem;
+}
+
+/* Desktop Layout - Title on left, 2 columns on right */
 .beliefs_contents {
   display: grid;
-  grid-template-columns: repeat(3, 30%);
-  justify-content: space-between;
-  gap: 2rem;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.beliefs_title_wrapper {
+  grid-column: 1;
+}
+
+.beliefs_lists_wrapper {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
 }
 
 .beliefs_contents h2 {
-  color: var(--grey_color);
+  color: var(--title_color);
+  font-size: var(--sub_section_fs);
+  margin: 0;
 }
-.beliefs_contents ul {
+
+.beliefs_list {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.beliefs_contents ul li {
+
+.beliefs_list li {
   color: var(--grey_color);
   line-height: 1.6;
+  font-size: 1rem;
+  font-family: var(--text_ff);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.beliefs_list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--grey_color);
+  font-weight: bold;
+}
+
+/* Tablet Layout - Title on left, lists wrap below and beside */
+@media screen and (max-width: 1024px) {
+  .beliefs_contents {
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+  }
+
+  .beliefs_title_wrapper {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  .beliefs_lists_wrapper {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .beliefs_contents h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile Layout - Everything stacks vertically */
+@media screen and (max-width: 768px) {
+  .beliefs_container {
+    gap: 3rem;
+  }
+
+  .beliefs_contents {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .beliefs_title_wrapper {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .beliefs_lists_wrapper {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .beliefs_contents h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .beliefs_list {
+    gap: 0.8rem;
+  }
+
+  .beliefs_list li {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .beliefs_container {
+    gap: 2.5rem;
+  }
+
+  .beliefs_contents {
+    gap: 1.5rem;
+  }
+
+  .beliefs_contents h2 {
+    font-size: 1.2rem;
+  }
+
+  .beliefs_list li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 }

@@ -9,6 +9,7 @@ import useFetch from "./Hooks/useFetch";
 import About from "./Pages/About/About";
 import Sermons from "./Pages/Sermons/Sermons";
 import Sermon from "./Pages/Sermon/Sermon";
+import SecondaryNavbar from "./Components/SecondaryNavbar/SecondaryNavbar";
 
 const App = () => {
   const {
@@ -37,7 +38,8 @@ const App = () => {
     <>
       <main>
         <BrowserRouter>
-          <Navbar />
+          {/* <Navbar /> */}
+          {/* <SecondaryNavbar/> */}
           <Routes>
             <Route element={<Home />} path="/"></Route>
             <Route element={<About />}  path="/about"/>

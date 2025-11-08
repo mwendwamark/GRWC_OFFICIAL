@@ -9,7 +9,7 @@
 
 .navbar {
   width: 100%;
-  background-color: var(--bg_color);
+  background-color: transparent;
   padding: 0;
   transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
@@ -17,9 +17,14 @@
 }
 
 .navbar--scrolled {
-  background-color: var(--bg_color);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.7px);
+  -webkit-backdrop-filter: blur(2.7px);
+}
+
+.navbar--hidden {
+  transform: translateY(-100%);
 }
 
 .navbar__container {
@@ -101,7 +106,7 @@
 }
 
 .navbar__dropdown-icon {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
   color: var(--text_color);
 }
 
@@ -123,7 +128,7 @@
 }
 
 .navbar__hamburger-icon {
-  color: var(--text_color);
+  color: var(--bg_color);
   transition: color 0.3s ease;
 }
 
@@ -309,6 +314,75 @@
   color: var(--light_purple);
 }
 
+/* Scroll-based color changes for desktop */
+@media screen and (min-width: 1001px) {
+  /* Initial white color for links when not scrolled */
+  .navbar:not(.navbar--scrolled) .navbar__menu-link {
+    color: #ffffff;
+  }
+
+  .navbar:not(.navbar--scrolled) .navbar__dropdown-icon {
+    color: #ffffff;
+  }
+
+  .navbar:not(.navbar--scrolled) .navbar__hamburger-icon {
+    color: #ffffff;
+  }
+
+  /* Hover states for white links */
+  .navbar:not(.navbar--scrolled) .navbar__menu-link:hover {
+    color: var(--light_purple);
+  }
+
+  .navbar:not(.navbar--scrolled)
+    .navbar__menu-link:hover
+    .navbar__dropdown-icon {
+    color: var(--light_purple);
+  }
+
+  .navbar:not(.navbar--scrolled)
+    .navbar__hamburger:hover
+    .navbar__hamburger-icon {
+    color: var(--light_purple);
+  }
+
+  /* Active state for white links */
+  .navbar:not(.navbar--scrolled) .navbar__menu-link.active {
+    color: var(--light_purple);
+  }
+}
+
+/* Scrolled state - change to text color */
+.navbar__menu-link--scrolled {
+  color: var(--text_color) !important;
+}
+
+.navbar__dropdown-icon--scrolled {
+  color: var(--text_color) !important;
+}
+
+.navbar__hamburger-icon--scrolled {
+  color: var(--text_color) !important;
+}
+
+/* Hover states for scrolled links */
+.navbar__menu-link--scrolled:hover {
+  color: var(--purple_color) !important;
+}
+
+.navbar__menu-link--scrolled:hover .navbar__dropdown-icon--scrolled {
+  color: var(--purple_color) !important;
+}
+
+.navbar__hamburger-icon--scrolled:hover {
+  color: var(--purple_color) !important;
+}
+
+/* Active state for scrolled links */
+.navbar__menu-link--scrolled.active {
+  color: var(--purple_color) !important;
+}
+
 @media screen and (max-width: 1000px) {
   .navbar__logo img {
     height: 100%;
@@ -355,6 +429,10 @@
     padding: 1rem 0;
     width: 100%;
     justify-content: space-between;
+  }
+
+  .navbar__contact_btn {
+    padding: 1rem 0;
   }
 
   .navbar__menu-link:hover {

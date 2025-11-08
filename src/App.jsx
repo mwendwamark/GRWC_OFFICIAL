@@ -40,7 +40,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route element={<Home />} path="/"></Route>
-            <Route element={<About />} />
+            <Route element={<About />}  path="/about"/>
             <Route
               path="/events"
               element={<Events events={eventsData?.data} />}

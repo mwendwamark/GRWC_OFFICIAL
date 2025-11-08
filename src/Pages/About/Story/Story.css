@@ -1,0 +1,35 @@
+.about_story_container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.about_story_items {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.about_story_item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about_story_item h3,
+.about_story_item p {
+  color: var(--grey_color);
+}
+
+.about_story_item p {
+  line-height: 1.6;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .about_story_items {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

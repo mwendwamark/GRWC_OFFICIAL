@@ -1,0 +1,124 @@
+.about_hero_section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.about_hero_bg_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  display: block;
+}
+
+.about_hero_section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)); ;
+  z-index: 1;
+}
+
+.about_hero_overlay {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  color: #ffffff;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 12rem; /* Space for navbar */
+  padding-bottom: 4rem;
+}
+
+.about_hero_title {
+  color: inherit;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about_hero_subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0;
+  color: var(--light_purple);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.about_hero_invite_text {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.about_hero_invite_text p {
+  max-width: 40%;
+}
+
+.about_hero_buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .about_hero_section {
+    min-height: 100vh;
+  }
+
+  .about_hero_overlay {
+    padding: 10rem 2rem 4rem 2rem;
+    gap: 6rem;
+  }
+
+  .about_hero_subtitle {
+    font-size: 1rem;
+  }
+
+  .about_hero_invite_text p {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .about_hero_overlay {
+    padding: 9rem 1rem 3rem 1rem;
+  }
+
+  .about_hero_buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .about_hero_buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .about_hero_subtitle,
+  .about_hero_title {
+    text-align: center;
+  }
+
+  .about_hero_invite_text p {
+    max-width: 100%;
+  }
+}

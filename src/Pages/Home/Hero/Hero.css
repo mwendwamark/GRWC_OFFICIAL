@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -26,7 +26,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
   z-index: 1;
 }
 
@@ -35,14 +35,17 @@
   z-index: 2;
   text-align: left;
   color: #ffffff;
-  max-width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
   padding: 3rem;
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 10rem;
+  padding-top: 12rem; /* Space for navbar */
+  padding-bottom: 4rem;
 }
 
 .home_hero_title {
@@ -77,11 +80,12 @@
 
 @media screen and (max-width: 768px) {
   .home_hero_section {
-    min-height: 60vh;
+    min-height: 100vh;
   }
 
   .home_hero_overlay {
-    padding: 6rem 1rem;
+    padding: 10rem 2rem 4rem 2rem;
+    gap: 6rem;
   }
 
   .home_hero_subtitle {
@@ -94,6 +98,10 @@
 }
 
 @media screen and (max-width: 390px) {
+  .home_hero_overlay {
+    padding: 9rem 1rem 3rem 1rem;
+  }
+
   .home_hero_buttons {
     flex-direction: column;
     width: 100%;
@@ -111,6 +119,6 @@
   }
 
   .home_hero_invite_text p {
-    width: 100%;
+    max-width: 100%;
   }
 }

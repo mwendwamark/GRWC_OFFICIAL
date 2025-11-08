@@ -35,10 +35,7 @@
 
 .home_mission,
 .home_vision {
-  padding: 2rem 1rem;
-  /* border: 1px solid var(--grey_color); */
-  border-radius: 1rem;
-  background-color: var(--white_alt_color);
+  padding: 3rem 2rem;
   box-shadow: 6px 6px 10px var(--light_purple);
   display: flex;
   flex-direction: column;
@@ -48,6 +45,10 @@
 .home_mission h3,
 .home_vision h3 {
   color: var(--title_color);
+}
+
+.home_mission p, .home_vision p {
+  color: var(--text_color);
 }
 
 @media screen and (max-width: 1100px) {

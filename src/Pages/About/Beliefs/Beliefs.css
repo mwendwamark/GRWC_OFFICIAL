@@ -1,0 +1,25 @@
+.beliefs_container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.beliefs_contents {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.beliefs_contents h2 {
+  color: var(--grey_color);
+}
+.beliefs_contents ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.beliefs_contents ul li {
+  color: var(--grey_color);
+  line-height: 1.6;
+}

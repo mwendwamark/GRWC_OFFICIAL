@@ -5,6 +5,7 @@ import { getImageUrl } from "../../Utils/apiConfig";
 import { Helmet } from "react-helmet";
 import { RiCalendar2Line, RiAlarmFill, RiTimeLine } from "@remixicon/react";
 import img from "../../assets/Images/AboutImages/BishopPreaching.webp";
+import SecondaryNavbar from "../../Components/SecondaryNavbar/SecondaryNavbar";
 const Events = ({ events }) => {
   const eventsArray = Array.isArray(events) ? events : [];
 
@@ -66,6 +67,7 @@ const Events = ({ events }) => {
 
   return (
     <>
+      <SecondaryNavbar />
       <Helmet>
         <title>Community Events & Gatherings</title>
       </Helmet>
@@ -76,7 +78,7 @@ const Events = ({ events }) => {
           <div className="events_page_hero grid_container">
             <div className="events_page_titles section_headers">
               <h1 className="events_page_section_title hero_title">
-               Our inspiring church events
+                Our inspiring church events
               </h1>
               <p className="events_page_subtitle_text width_80">
                 No matter your stage of life, there’s always a next step for

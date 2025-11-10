@@ -1,6 +1,6 @@
 .about_team_section {
-  /* background-color: var(--white_alt_color); */
-  background-color: var(--light_purple);
+  background-color: var(--white_alt_color);
+  padding-bottom: 30rem;
 }
 
 .about_team_container {

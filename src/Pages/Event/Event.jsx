@@ -13,6 +13,7 @@ import { RiMicrosoftFill } from "@remixicon/react";
 import { RiAppleFill } from "@remixicon/react";
 import { RiArrowLeftLine } from "@remixicon/react";
 import { RiArrowLeftLongLine } from "@remixicon/react";
+import SecondaryNavbar from "../../Components/SecondaryNavbar/SecondaryNavbar";
 
 // Calendar utility functions
 const generateGoogleCalendarUrl = (event) => {
@@ -205,7 +206,9 @@ const Event = () => {
     if (!end || start.toDateString() === end.toDateString() || daysDiff <= 1) {
       return {
         type: "single",
-        day: new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(start),
+        day: new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(
+          start
+        ),
         date: start.toLocaleDateString("en-US", {
           month: "long",
           day: "numeric",
@@ -223,12 +226,16 @@ const Event = () => {
     return {
       type: "multi",
       duration: daysDiff,
-      startDay: new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(start),
+      startDay: new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(
+        start
+      ),
       startDate: start.toLocaleDateString("en-US", {
         month: "short",
         day: "numeric",
       }),
-      endDay: new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(end),
+      endDay: new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(
+        end
+      ),
       endDate: end.toLocaleDateString("en-US", {
         month: "short",
         day: "numeric",
@@ -248,8 +255,12 @@ const Event = () => {
         <div className="event_page_loading_spinner"></div>
       </div>
     );
-  if (error) return <div className="event_page_error_container">Error: {error}</div>;
-  if (!event) return <div className="event_page_not_found_container">Event not found</div>;
+  if (error)
+    return <div className="event_page_error_container">Error: {error}</div>;
+  if (!event)
+    return (
+      <div className="event_page_not_found_container">Event not found</div>
+    );
 
   const eventDetails = {
     ...event,
@@ -287,6 +298,7 @@ const Event = () => {
 
   return (
     <>
+      <SecondaryNavbar />
       <Helmet>
         <title>{eventDetails.eventTitle} | Gospel Revival Wave Church</title>
         <meta
@@ -324,10 +336,10 @@ const Event = () => {
 
               {/* Event Image */}
               <div className="event_page_image_container">
-                <img 
-                  src={imageUrl} 
+                <img
+                  src={imageUrl}
                   alt={eventDetails.eventTitle}
-                  className="event_page_image" 
+                  className="event_page_image"
                 />
               </div>
 
@@ -363,7 +375,9 @@ const Event = () => {
                     {/* Recurrence */}
                     <div className="event_page_info_row">
                       <span className="event_page_info_label">Recurrence</span>
-                      <span className="event_page_info_value">{formattedDay}</span>
+                      <span className="event_page_info_value">
+                        {formattedDay}
+                      </span>
                     </div>
 
                     {/* Date Display - Single or Multi-day */}
@@ -377,30 +391,44 @@ const Event = () => {
                         </div>
                         <div className="event_page_info_row">
                           <span className="event_page_info_label">Time</span>
-                          <span className="event_page_info_value">{formattedTime}</span>
+                          <span className="event_page_info_value">
+                            {formattedTime}
+                          </span>
                         </div>
                       </>
                     ) : (
                       <>
                         <div className="event_page_info_row">
-                          <span className="event_page_info_label">Duration</span>
-                          <span className="event_page_info_value">{dateInfo.duration} Days</span>
+                          <span className="event_page_info_label">
+                            Duration
+                          </span>
+                          <span className="event_page_info_value">
+                            {dateInfo.duration} Days
+                          </span>
                         </div>
                         <div className="event_page_info_row">
-                          <span className="event_page_info_label">Start Date</span>
+                          <span className="event_page_info_label">
+                            Start Date
+                          </span>
                           <span className="event_page_info_value">
                             {dateInfo.startDay}, {dateInfo.startDate}
                           </span>
                         </div>
                         <div className="event_page_info_row">
-                          <span className="event_page_info_label">End Date</span>
+                          <span className="event_page_info_label">
+                            End Date
+                          </span>
                           <span className="event_page_info_value">
                             {dateInfo.endDay}, {dateInfo.endDate}
                           </span>
                         </div>
                         <div className="event_page_info_row">
-                          <span className="event_page_info_label">Start Time</span>
-                          <span className="event_page_info_value">{dateInfo.startTime}</span>
+                          <span className="event_page_info_label">
+                            Start Time
+                          </span>
+                          <span className="event_page_info_value">
+                            {dateInfo.startTime}
+                          </span>
                         </div>
                       </>
                     )}
@@ -420,7 +448,9 @@ const Event = () => {
                   {/* Point of Contact */}
                   {eventDetails.eventLeader && (
                     <div className="event_page_contact_section">
-                      <h3 className="event_page_section_label">POINT OF CONTACT</h3>
+                      <h3 className="event_page_section_label">
+                        POINT OF CONTACT
+                      </h3>
                       <div className="event_page_contact_card">
                         {leaderImageUrl ? (
                           <img
@@ -456,7 +486,9 @@ const Event = () => {
                       </button>
                     ) : (
                       <div className="event_page_calendar_options">
-                        <h4 className="event_page_calendar_heading">Select Calendar</h4>
+                        <h4 className="event_page_calendar_heading">
+                          Select Calendar
+                        </h4>
                         <div className="event_page_calendar_buttons">
                           <a
                             href={generateGoogleCalendarUrl(eventDetails)}

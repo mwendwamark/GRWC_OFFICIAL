@@ -6,6 +6,7 @@ import Stats from "./Stats/Stats";
 import Beliefs from "./Beliefs/Beliefs";
 import Navbar from "../../Components/Navbar/Navbar";
 import Team from "./Team/Team";
+import CTA from "./CTA/CTA";
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
       <Stats />
       <Beliefs />
       <Team />
+      <CTA />
     </div>
   );
 };

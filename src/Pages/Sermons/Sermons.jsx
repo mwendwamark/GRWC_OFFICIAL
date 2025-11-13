@@ -177,7 +177,7 @@ const Sermons = () => {
   return (
     <>
       <SecondaryNavbar />
-      <div className="sermons_page_container below_navbar">
+      <div className="sermons_page_container  below_navbar">
         <div className="sermons_page_wrapper container">
           {/* Hero Section */}
           <div className="sermons_page_hero grid_container">

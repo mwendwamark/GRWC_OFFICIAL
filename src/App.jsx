@@ -10,6 +10,8 @@ import About from "./Pages/About/About";
 import Sermons from "./Pages/Sermons/Sermons";
 import Sermon from "./Pages/Sermon/Sermon";
 import SecondaryNavbar from "./Components/SecondaryNavbar/SecondaryNavbar";
+import NotFound from "./Pages/404/NotFound";
+import Visit from "./Pages/Visit/Visit";
 
 const App = () => {
   const {
@@ -38,11 +40,10 @@ const App = () => {
     <>
       <main>
         <BrowserRouter>
-          {/* <Navbar /> */}
-          {/* <SecondaryNavbar/> */}
           <Routes>
+            <Route element={<NotFound />} path="*"></Route>
             <Route element={<Home />} path="/"></Route>
-            <Route element={<About />}  path="/about"/>
+            <Route element={<About />} path="/about" />
             <Route
               path="/events"
               element={<Events events={eventsData?.data} />}
@@ -50,6 +51,7 @@ const App = () => {
             <Route path="/church-events/:id" element={<Event />} />
             <Route path="/sermons" element={<Sermons />} />
             <Route path="/sermons/:id" element={<Sermon />} />
+            <Route path="/visit_us" element={<Visit />} />
           </Routes>
         </BrowserRouter>
       </main>

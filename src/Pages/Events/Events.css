@@ -10,10 +10,10 @@
 .events_page_hero {
   align-items: center;
 }
-.events_page_section {
+/* .events_page_section {
   max-width: 1400px;
   margin: 0 auto;
-}
+} */
 
 .events_page_hero .btn_black_outline {
   width: fit-content;

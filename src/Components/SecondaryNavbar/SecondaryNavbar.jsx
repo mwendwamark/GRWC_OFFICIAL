@@ -238,11 +238,11 @@ const SecondaryNavbar = () => {
                 <li className="secondary-navbar__menu-item secondary-navbar__contact_btn">
                   <NavLink
                     aria-label="Go to Contact page"
-                    to="/contact"
+                    to="/visit_us"
                     onClick={closeMobileMenu}
                     className="btn btn_purple"
                   >
-                    Contact
+                    Visit Us
                   </NavLink>
                 </li>
               </ul>

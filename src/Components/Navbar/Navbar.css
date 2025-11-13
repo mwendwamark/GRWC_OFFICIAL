@@ -260,6 +260,10 @@
   background: linear-gradient(135deg, #009688 0%, #4db6ac 100%);
 }
 
+.navbar__dropdown-placeholder-icon--8 {
+  background: linear-gradient(135deg, #9c27b0 0%, #e1bee7 100%);
+}
+
 .navbar__dropdown-item-content {
   display: flex;
   flex-direction: column;

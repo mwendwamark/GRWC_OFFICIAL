@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./Hero/Hero";
 import Navbar from "../../Components/Navbar/Navbar";
 import Expectation from "./Expectation/Expectation";
+import Locations from "./Locations/Locations";
 
 const Visit = () => {
   return (
@@ -9,6 +10,7 @@ const Visit = () => {
       <Navbar />
       <Hero />
       <Expectation />
+      <Locations />
     </div>
   );
 };

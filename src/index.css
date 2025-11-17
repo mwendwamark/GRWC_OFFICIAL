@@ -71,7 +71,7 @@ html {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 10rem 0;
 }
 
 .section_headers {
@@ -92,6 +92,13 @@ html {
 
 .hero_title {
   font-size: var(--hero_fs);
+  letter-spacing: -1px;
+  font-weight: 700;
+  font-family: var(--title_ff);
+}
+
+.hero_title_2{
+   font-size: 3.5rem;
   letter-spacing: -1px;
   font-weight: 700;
   font-family: var(--title_ff);

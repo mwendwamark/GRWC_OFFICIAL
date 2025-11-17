@@ -225,43 +225,16 @@
   justify-content: center;
 }
 
-.navbar__dropdown-placeholder-icon {
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  opacity: 0.2;
+/* Ministry and Branch Icons */
+.ministry-icon,
+.branch-icon {
+  color: var(--purple_color);
+  transition: transform 0.3s ease;
 }
 
-.navbar__dropdown-placeholder-icon--1 {
-  background: linear-gradient(135deg, #f44336 0%, #ff5722 100%);
-}
-
-.navbar__dropdown-placeholder-icon--2 {
-  background: linear-gradient(135deg, #00bcd4 0%, #26c6da 100%);
-}
-
-.navbar__dropdown-placeholder-icon--3 {
-  background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
-}
-
-.navbar__dropdown-placeholder-icon--4 {
-  background: linear-gradient(135deg, #9c27b0 0%, #e1bee7 100%);
-}
-
-.navbar__dropdown-placeholder-icon--5 {
-  background: linear-gradient(135deg, #4caf50 0%, #81c784 100%);
-}
-
-.navbar__dropdown-placeholder-icon--6 {
-  background: linear-gradient(135deg, #2196f3 0%, #64b5f6 100%);
-}
-
-.navbar__dropdown-placeholder-icon--7 {
-  background: linear-gradient(135deg, #009688 0%, #4db6ac 100%);
-}
-
-.navbar__dropdown-placeholder-icon--8 {
-  background: linear-gradient(135deg, #9c27b0 0%, #e1bee7 100%);
+.navbar__dropdown-item:hover .ministry-icon,
+.navbar__dropdown-item:hover .branch-icon {
+  transform: scale(1.1);
 }
 
 .navbar__dropdown-item-content {

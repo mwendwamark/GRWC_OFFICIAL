@@ -1,0 +1,20 @@
+.mens_subhero {
+  background-color: rgb(8, 94, 66);
+}
+
+.mens_subhero_container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.mens_subhero_title {
+  color: var(--white_alt_color);
+  max-width: 60%;
+}
+
+@media screen and (max-width: 850px) {
+  .mens_subhero_title {
+    max-width: 100%;
+  }
+}

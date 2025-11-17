@@ -5,6 +5,15 @@ import Logo from "../../../public/Logo.webp";
 import { RiMenu3Line } from "@remixicon/react";
 import { RiCloseLine } from "@remixicon/react";
 import { RiArrowDownSLine } from "@remixicon/react";
+import { RiMusic2Fill } from "@remixicon/react";
+import { RiTeamFill } from "@remixicon/react";
+import { RiWomenFill } from "@remixicon/react";
+import { RiUserHeartFill } from "@remixicon/react";
+import { RiShakeHandsFill } from "@remixicon/react";
+import { RiCameraFill } from "@remixicon/react";
+import { RiHandHeartFill } from "@remixicon/react";
+import { RiBook3Fill } from "@remixicon/react";
+import { RiMapPinFill } from "@remixicon/react";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -82,14 +91,18 @@ const Navbar = () => {
   };
 
   const ministriesLinks = [
-    { name: "Choir", path: "/ministries/choir" },
-    { name: "Men's", path: "/ministries/men" },
-    { name: "Women's", path: "/ministries/women" },
-    { name: "Youth", path: "/ministries/youth" },
-    { name: "Youngster's", path: "/ministries/kyc" },
-    { name: "Media", path: "/ministries/media" },
-    { name: "Ushers", path: "/ministries/usehring" },
-    { name: "Sunday School", path: "/ministries/sunday-school" },
+    { name: "Choir", path: "/ministries/choir", icon: RiMusic2Fill },
+    { name: "Men's", path: "/ministries/men", icon: RiTeamFill },
+    { name: "Women's", path: "/ministries/women", icon: RiWomenFill },
+    { name: "Youth", path: "/ministries/youth", icon: RiUserHeartFill },
+    { name: "Youngster's", path: "/ministries/kyc", icon: RiShakeHandsFill },
+    { name: "Media", path: "/ministries/media", icon: RiCameraFill },
+    { name: "Ushers", path: "/ministries/usehring", icon: RiHandHeartFill },
+    {
+      name: "Sunday School",
+      path: "/ministries/sunday_school",
+      icon: RiBook3Fill,
+    },
   ];
 
   const branchesLinks = [
@@ -311,27 +324,29 @@ const Navbar = () => {
               >
                 <div className="navbar__dropdown-container container">
                   <div className="navbar__dropdown-grid">
-                    {ministriesLinks.map((link, index) => (
-                      <NavLink
-                        key={index}
-                        to={link.path}
-                        className="navbar__dropdown-item"
-                        onClick={closeMobileMenu}
-                      >
-                        <div className="navbar__dropdown-item-icon">
-                          <div
-                            className={`navbar__dropdown-placeholder-icon navbar__dropdown-placeholder-icon--${
-                              index + 1
-                            }`}
-                          ></div>
-                        </div>
-                        <div className="navbar__dropdown-item-content">
-                          <span className="navbar__dropdown-item-title">
-                            {link.name}
-                          </span>
-                        </div>
-                      </NavLink>
-                    ))}
+                    {ministriesLinks.map((link, index) => {
+                      const IconComponent = link.icon;
+                      return (
+                        <NavLink
+                          key={index}
+                          to={link.path}
+                          className="navbar__dropdown-item"
+                          onClick={closeMobileMenu}
+                        >
+                          <div className="navbar__dropdown-item-icon">
+                            <IconComponent
+                              size={40}
+                              className="ministry-icon"
+                            />
+                          </div>
+                          <div className="navbar__dropdown-item-content">
+                            <span className="navbar__dropdown-item-title">
+                              {link.name}
+                            </span>
+                          </div>
+                        </NavLink>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -356,7 +371,7 @@ const Navbar = () => {
                         onClick={closeMobileMenu}
                       >
                         <div className="navbar__dropdown-item-icon">
-                          <div className="navbar__dropdown-placeholder-icon"></div>
+                          <RiMapPinFill size={40} className="branch-icon" />
                         </div>
                         <div className="navbar__dropdown-item-content">
                           <span className="navbar__dropdown-item-label">

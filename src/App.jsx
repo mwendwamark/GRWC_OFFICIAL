@@ -9,10 +9,12 @@ import useFetch from "./Hooks/useFetch";
 import About from "./Pages/About/About";
 import Sermons from "./Pages/Sermons/Sermons";
 import Sermon from "./Pages/Sermon/Sermon";
-import SecondaryNavbar from "./Components/SecondaryNavbar/SecondaryNavbar";
 import NotFound from "./Pages/404/NotFound";
 import Visit from "./Pages/Visit/Visit";
-
+import Mens from "./Pages/Ministries/Mens/Mens";
+import SundaySchool from "./Pages/Ministries/SundaySchool/SundaySchool";
+import Youngsters from "./Pages/Ministries/Youngsters/Youngsters";
+import Women from "./Pages/Ministries/Women/Women";
 const App = () => {
   const {
     loading: announcementsLoading,
@@ -52,6 +54,12 @@ const App = () => {
             <Route path="/sermons" element={<Sermons />} />
             <Route path="/sermons/:id" element={<Sermon />} />
             <Route path="/visit_us" element={<Visit />} />
+            <Route path="/ministries/men" element={<Mens />} />
+            <Route path="/ministries/sunday_school" element={<SundaySchool />} />
+            <Route path="/ministries/kyc" element={<Youngsters />} />
+            <Route path="/ministries/women" element={<Women />} />
+
+
           </Routes>
         </BrowserRouter>
       </main>

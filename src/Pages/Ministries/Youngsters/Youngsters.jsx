@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+import MinistryLayout from "../MinistryLayout";
+import { youngstersMinistryData } from "../MinistryData";
 
 const Youngsters = () => {
-  return (
-    <div>Youngsters</div>
-  )
-}
+  return <MinistryLayout data={youngstersMinistryData} />;
+};
 
-export default Youngsters
+export default Youngsters;

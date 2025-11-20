@@ -1,21 +1,9 @@
-import SecondaryNavbar from "../../../Components/SecondaryNavbar/SecondaryNavbar";
-import Hero from "./Hero/Hero";
-import SubHero from "./SubHero/SubHero";
-import Activities from "./Activities/Activities";
-import FAQ from "./FAQS/FAQS";
+import React from "react";
+import MinistryLayout from "../MinistryLayout";
+import { womenMinistryData } from "../MinistryData";
 
 const Women = () => {
-  return (
-    <>
-      <SecondaryNavbar />
-      <div className="women_ministry_page">
-        <Hero />
-        <SubHero />
-        <Activities />
-        <FAQ />
-      </div>
-    </>
-  );
+  return <MinistryLayout data={womenMinistryData} />;
 };
 
 export default Women;

@@ -1,22 +1,9 @@
-import SecondaryNavbar from "../../../Components/SecondaryNavbar/SecondaryNavbar";
-import Hero from "./Hero/Hero";
-import SubHero from "./SubHero/SubHero";
-import Activities from "./Activities/Activities";
-import FAQ from "./FAQS/FAQS";
-
+import React from "react";
+import MinistryLayout from "../MinistryLayout";
+import { mensMinistryData } from "../MinistryData";
 
 const Mens = () => {
-  return (
-    <>
-      <SecondaryNavbar />
-      <div className="mens_ministry_page">
-        <Hero />
-        <SubHero />
-        <Activities />
-        <FAQ />
-      </div>
-    </>
-  );
+  return <MinistryLayout data={mensMinistryData} />;
 };
 
 export default Mens;

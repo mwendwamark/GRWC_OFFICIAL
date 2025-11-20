@@ -32,9 +32,41 @@
   color: rgb(8, 94, 66);
 }
 
+.mens_hero_icon {
+  color: rgb(8, 94, 66);
+}
+
+.women_hero_icon {
+  color: var(--purple_color);
+}
+
+.sundayschool_hero_icon {
+  color: #ff9800;
+}
+
+.youngsters_hero_icon {
+  color: #009688;
+}
+
 /* SubHero Section Styles */
 .ministries_subhero {
   /* background-color: rgb(8, 94, 66); */
+}
+
+.mens_subhero {
+  background-color: rgb(8, 94, 66);
+}
+
+.women_subhero {
+  background-color: var(--purple_color);
+}
+
+.sundayschool_subhero {
+  background-color: #ff9800; /* Orange */
+}
+
+.youngsters_subhero {
+  background-color: #009688; /* Teal */
 }
 
 .ministries_subhero_container {

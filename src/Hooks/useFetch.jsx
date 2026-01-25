@@ -26,7 +26,7 @@ const useFetch = (url) => {
       } catch (err) {
         if (!signal.aborted) {
           setError(err.message || 'An unknown error occurred');
-          console.error('Fetch error:', err);
+          // console.error('Fetch error:', err);
         }
       } finally {
         if (!signal.aborted) {

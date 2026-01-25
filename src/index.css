@@ -13,7 +13,7 @@
   --hero_fs: 6rem;
   --section_fs: 2.3rem;
   --sub_section_fs: 1.4rem;
-  --title_top: 1.1rem;
+  --title_top: 1.125rem;
   --btn_fs: 0.925rem;
 
   --title_ff: "Questrial", serif;
@@ -50,6 +50,10 @@ button {
 html {
   scroll-behavior: smooth;
   animation-delay: 2s;
+}
+
+li {
+  list-style: none;
 }
 
 .below_navbar {
@@ -95,11 +99,10 @@ html {
   letter-spacing: -1px;
   font-weight: 700;
   font-family: var(--title_ff);
-  
 }
 
-.hero_title_2{
-   font-size: 3.5rem;
+.hero_title_2 {
+  font-size: 3.5rem;
   letter-spacing: -1px;
   font-weight: 700;
   font-family: var(--title_ff);
@@ -206,7 +209,7 @@ html {
   border: 1px solid var(--grey_color);
 }
 
-.btn_white_outline{
+.btn_white_outline {
   background-color: transparent;
   color: var(--bg_color);
   border: 1px solid var(--bg_color);
@@ -318,4 +321,3 @@ html {
     gap: 3rem;
   }
 }
-

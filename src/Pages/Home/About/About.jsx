@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import Img from "../../../assets/Images/AboutImages/BishopPreaching.webp";
+import Img from "../../../assets/Images/AboutImages/AboutHero.webp";
 import { NavLink } from "react-router-dom";
 import { RiArrowRightLongLine } from "@remixicon/react";
 

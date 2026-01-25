@@ -57,3 +57,17 @@
   display: flex;
   gap: 1rem;
 }
+
+@media screen and (max-width: 1000px){
+  .visit_hero_overlay{
+    padding: 8rem 1rem;
+  }
+}
+@media screen and (max-width: 400px){
+  .visit_hero_overlay{
+    padding: 8rem 0rem;
+  }
+  .visit_us_btns{
+    flex-direction: column;
+  }
+}

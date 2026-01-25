@@ -15,12 +15,13 @@ import Mens from "./Pages/Ministries/Mens/Mens";
 import SundaySchool from "./Pages/Ministries/SundaySchool/SundaySchool";
 import Youngsters from "./Pages/Ministries/Youngsters/Youngsters";
 import Women from "./Pages/Ministries/Women/Women";
+import Footer from "./Components/Footer/Footer";
 const App = () => {
-  const {
-    loading: announcementsLoading,
-    error: announcementsError,
-    data: announcementsData,
-  } = useFetch(getFullApiUrl("api/announcements"));
+  // const {
+  //   loading: announcementsLoading,
+  //   error: announcementsError,
+  //   data: announcementsData,
+  // } = useFetch(getFullApiUrl("api/announcements"));
 
   const {
     loading: eventsLoading,
@@ -34,10 +35,13 @@ const App = () => {
     data: sermonsData,
   } = useFetch(getFullApiUrl("api/sermons?populate=*"));
   // Check if any data is still loading
-  if (announcementsLoading || eventsLoading || sermonsLoading) {
+  // if (announcementsLoading || eventsLoading || sermonsLoading) {
+  //   return <p className="loading-message">Loading...</p>;
+  // }
+
+  if (eventsLoading || sermonsLoading) {
     return <p className="loading-message">Loading...</p>;
   }
-
   return (
     <>
       <main>
@@ -55,12 +59,14 @@ const App = () => {
             <Route path="/sermons/:id" element={<Sermon />} />
             <Route path="/visit_us" element={<Visit />} />
             <Route path="/ministries/men" element={<Mens />} />
-            <Route path="/ministries/sunday_school" element={<SundaySchool />} />
+            <Route
+              path="/ministries/sunday_school"
+              element={<SundaySchool />}
+            />
             <Route path="/ministries/kyc" element={<Youngsters />} />
             <Route path="/ministries/women" element={<Women />} />
-
-
           </Routes>
+          <Footer />
         </BrowserRouter>
       </main>
     </>

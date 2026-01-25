@@ -1,47 +1,55 @@
 import React from "react";
 import "./InfiniteScroll.css";
+import img1 from "../../../assets/Images/GRWC/GRWC1.webp";
+import img2 from "../../../assets/Images/GRWC/GRWC2.webp";
+import img3 from "../../../assets/Images/GRWC/GRWC3.webp";
+import img4 from "../../../assets/Images/GRWC/GRWC4.webp";
+import img5 from "../../../assets/Images/GRWC/GRWC5.webp";
+import img6 from "../../../assets/Images/GRWC/GRWC6.webp";
+import img7 from "../../../assets/Images/GRWC/GRWC7.webp";
+import img8 from "../../../assets/Images/GRWC/GRWC8.webp";
 
 const InfiniteScroll = () => {
   // Sample images - replace with your actual image paths
   // Pattern: landscape, portrait, landscape, portrait...
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1526746323784-6bc814d79273?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500",
+      src: img1,
       alt: "Community 1",
       orientation: "landscape",
     },
     {
-      src: "https://images.unsplash.com/photo-1653133672754-82025e7e9074?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500",
+      src: img2,
       alt: "Community 2",
       orientation: "portrait",
     },
     {
-      src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500",
+      src: img3,
       alt: "Community 3",
       orientation: "landscape",
     },
     {
-      src: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500",
+      src: img4,
       alt: "Community 4",
       orientation: "portrait",
     },
     {
-      src: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500",
+      src: img5,
       alt: "Community 5",
       orientation: "landscape",
     },
     {
-      src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500",
+      src: img6,
       alt: "Community 6",
       orientation: "portrait",
     },
     {
-      src: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500",
+      src: img7,
       alt: "Community 7",
       orientation: "landscape",
     },
     {
-      src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500",
+      src: img8,
       alt: "Community 8",
       orientation: "portrait",
     },

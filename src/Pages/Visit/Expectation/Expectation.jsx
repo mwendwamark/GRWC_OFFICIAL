@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Expectation.css";
-import Img1 from "../../../assets/Images/HomeImages/usher.webp";
+import Img1 from "../../../assets/Images/GRWC/GRWC4.webp";
 import Img2 from "../../../assets/Images/HomeImages/BishopPreaching.webp";
 import Img3 from "../../../assets/Images/HomeImages/Choir.webp";
 import Img4 from "../../../assets/Images/HomeImages/BishopPreaching.webp";
@@ -42,7 +42,7 @@ const Expectation = () => {
 
     const observer = new IntersectionObserver(
       observerCallback,
-      observerOptions
+      observerOptions,
     );
 
     itemRefs.current.forEach((ref) => {
@@ -66,7 +66,7 @@ const Expectation = () => {
     },
     {
       label: "Word from God",
-      title: "A Message From the Bible",
+      title: "A Sermon",
       description:
         "Our worship services revolve around Jesus. The Son of God came to share good news with His people 2,000 years ago, and He's still speaking today through His Word! Each week, you'll hear someone preach on a passage from the Bible that's meant to change us from the inside out.",
       image: Img2,

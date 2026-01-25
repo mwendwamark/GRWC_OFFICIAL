@@ -273,7 +273,7 @@ const Sermons = () => {
                   ))}
                 </select>
 
-                <select
+                {/* <select
                   value={selectedFormat}
                   onChange={(e) => setSelectedFormat(e.target.value)}
                   className="sermons_page_filter_select"
@@ -284,7 +284,7 @@ const Sermons = () => {
                       {format}
                     </option>
                   ))}
-                </select>
+                </select> */}
 
                 <select
                   value={selectedYear}

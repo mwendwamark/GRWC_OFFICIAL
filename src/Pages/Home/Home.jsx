@@ -11,6 +11,22 @@ import CTA from "./CTA/CTA";
 const Home = () => {
   return (
     <>
+      <title>
+        Gospel Revival Wave Church | Faith, Community & Transformation
+      </title>
+      <meta
+        name="description"
+        content="Welcome to Gospel Revival Wave Church. Join our community of believers for powerful worship, transformative sermons, and meaningful fellowship. Experience God's love with us."
+      />
+      <meta
+        property="og:title"
+        content="Gospel Revival Wave Church | Faith, Community & Transformation"
+      />
+      <meta
+        property="og:description"
+        content="Join our community of believers for powerful worship, transformative sermons, and meaningful fellowship."
+      />
+      <meta property="og:type" content="website" />
       <div className="home_page_container">
         <Navbar />
         <Hero />

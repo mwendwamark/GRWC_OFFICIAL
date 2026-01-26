@@ -398,6 +398,12 @@
 }
 
 /* Tablet Styles */
+@media (max-width: 1440px) {
+  .event_page_container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
 @media (max-width: 1024px) {
   .event_page_grid {
     grid-template-columns: 1fr;
@@ -462,7 +468,9 @@
 /* Small Mobile Styles */
 @media (max-width: 480px) {
   .event_page_container {
-    /* padding: 1.5rem 0; */
+    /* padding: 0rem 1rem; */
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .event_page_title {

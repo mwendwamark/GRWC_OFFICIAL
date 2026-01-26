@@ -34,7 +34,7 @@ const Sermons = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          getFullApiUrl("api/sermons?populate=*&sort=datePreached:desc")
+          getFullApiUrl("api/sermons?populate=*&sort=datePreached:desc"),
         );
 
         if (!response.ok) {
@@ -48,7 +48,7 @@ const Sermons = () => {
         if (data.data && data.data.length > 0) {
           const series = [
             ...new Set(
-              data.data.map((sermon) => sermon.series).filter(Boolean)
+              data.data.map((sermon) => sermon.series).filter(Boolean),
             ),
           ];
           const books = [
@@ -59,24 +59,24 @@ const Sermons = () => {
                     sermon.bibleReference?.match(/^(\d*\s*[A-Za-z]+)/);
                   return match ? match[0].trim() : null;
                 })
-                .filter(Boolean)
+                .filter(Boolean),
             ),
           ];
           const preachers = [
             ...new Set(
-              data.data.map((sermon) => sermon.preacher).filter(Boolean)
+              data.data.map((sermon) => sermon.preacher).filter(Boolean),
             ),
           ];
           const formats = [
             ...new Set(
-              data.data.map((sermon) => sermon.format).filter(Boolean)
+              data.data.map((sermon) => sermon.format).filter(Boolean),
             ),
           ];
           const years = [
             ...new Set(
               data.data
                 .map((sermon) => new Date(sermon.datePreached).getFullYear())
-                .filter(Boolean)
+                .filter(Boolean),
             ),
           ].sort((a, b) => b - a);
 
@@ -176,6 +176,20 @@ const Sermons = () => {
 
   return (
     <>
+      <title>Sermons | Gospel Revival Wave Church</title>
+      <meta
+        name="description"
+        content="Explore powerful sermons from Gospel Revival Wave Church. Watch, listen, and be transformed by messages that inspire, challenge, and strengthen your faith."
+      />
+      <meta
+        property="og:title"
+        content="Sermons | Gospel Revival Wave Church"
+      />
+      <meta
+        property="og:description"
+        content="Explore powerful sermons from Gospel Revival Wave Church. Watch, listen, and be transformed."
+      />
+      <meta property="og:type" content="website" />
       <SecondaryNavbar />
       <div className="sermons_page_container  below_navbar">
         <div className="sermons_page_wrapper container">

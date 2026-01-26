@@ -165,28 +165,28 @@
 
 /* Individual Share Button Colors */
 .share-button.whatsapp svg {
-  background: #E7F8EF;
-  color: #25D366;
+  background: #e7f8ef;
+  color: #25d366;
 }
 
 .share-button.facebook svg {
-  background: #E7F1FB;
-  color: #1877F2;
+  background: #e7f1fb;
+  color: #1877f2;
 }
 
 .share-button.email svg {
-  background: #F3E8F8;
+  background: #f3e8f8;
   color: var(--purple_color);
 }
 
 .share-button.instagram svg {
-  background: #FCE8ED;
-  color: #E4405F;
+  background: #fce8ed;
+  color: #e4405f;
 }
 
 .share-button.twitter svg {
-  background: #E5F4FD;
-  color: #1DA1F2;
+  background: #e5f4fd;
+  color: #1da1f2;
 }
 
 .share-button.copy-link svg {
@@ -195,12 +195,12 @@
 }
 
 .share-button:hover.whatsapp svg {
-  background: #25D366;
+  background: #25d366;
   color: #ffffff;
 }
 
 .share-button:hover.facebook svg {
-  background: #1877F2;
+  background: #1877f2;
   color: #ffffff;
 }
 
@@ -210,12 +210,12 @@
 }
 
 .share-button:hover.instagram svg {
-  background: #E4405F;
+  background: #e4405f;
   color: #ffffff;
 }
 
 .share-button:hover.twitter svg {
-  background: #1DA1F2;
+  background: #1da1f2;
   color: #ffffff;
 }
 
@@ -321,6 +321,15 @@
 
   .sermon-share-page-link {
     padding-top: 1.25rem;
+  }
+
+  .sermon-share-container {
+    width: 100%;
+  }
+
+  .sermon-share-container .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 

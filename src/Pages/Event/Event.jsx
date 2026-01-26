@@ -161,7 +161,7 @@ const Event = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          getFullApiUrl(`api/church-events/${id}?populate=*`)
+          getFullApiUrl(`api/church-events/${id}?populate=*`),
         );
 
         if (!response.ok) {
@@ -207,7 +207,7 @@ const Event = () => {
       return {
         type: "single",
         day: new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(
-          start
+          start,
         ),
         date: start.toLocaleDateString("en-US", {
           month: "long",
@@ -227,14 +227,14 @@ const Event = () => {
       type: "multi",
       duration: daysDiff,
       startDay: new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(
-        start
+        start,
       ),
       startDate: start.toLocaleDateString("en-US", {
         month: "short",
         day: "numeric",
       }),
       endDay: new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(
-        end
+        end,
       ),
       endDate: end.toLocaleDateString("en-US", {
         month: "short",
@@ -298,7 +298,6 @@ const Event = () => {
 
   return (
     <>
-      <SecondaryNavbar />
       <Helmet>
         <title>{eventDetails.eventTitle} | Gospel Revival Wave Church</title>
         <meta
@@ -318,6 +317,7 @@ const Event = () => {
         />
         {imageUrl && <meta property="og:image" content={imageUrl} />}
       </Helmet>
+      <SecondaryNavbar />
 
       <div className="event_page_container below_navbar">
         <div className="event_page_wrapper container">

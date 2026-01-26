@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import SecondaryNavbar from "../../Components/SecondaryNavbar/SecondaryNavbar";
 import { RiCloseLine } from "@remixicon/react";
 import "./ministries-shared.css";
@@ -12,12 +13,19 @@ const MinistryLayout = ({ data }) => {
   };
 
   const HeroSection = () => (
-    <div className="ministries_hero">
+    <div className="ministries_hero below_navbar">
       <div className="ministries_hero_container container">
         <div className="ministries_hero_contents">
-          <hero.icon size={120} className={`ministries_hero_icon ${hero.className || ''}`} />
+          <hero.icon
+            size={120}
+            className={`ministries_hero_icon ${hero.className || ""}`}
+          />
           <h1 className="hero_title_2">{hero.title}</h1>
-          <a href={hero.faqLink} className="btn btn_black_outline" style={{ width: "fit-content" }}>
+          <a
+            href={hero.faqLink}
+            className="btn btn_black_outline"
+            style={{ width: "fit-content" }}
+          >
             FAQs
           </a>
         </div>
@@ -30,7 +38,7 @@ const MinistryLayout = ({ data }) => {
   );
 
   const SubHeroSection = () => (
-    <div className={`ministries_subhero section ${subHero.className || ''}`}>
+    <div className={`ministries_subhero section ${subHero.className || ""}`}>
       <div className="ministries_subhero_container small_container">
         <strong className="title_top title_top_white">
           {subHero.titleTop}
@@ -43,7 +51,7 @@ const MinistryLayout = ({ data }) => {
   );
 
   const ActivitiesSection = () => (
-    <div className={`section ${activities.className || ''}`}>
+    <div className={`section ${activities.className || ""}`}>
       <div className="ministries_activities_container container">
         <div className="ministries_activities_contents">
           <div className="ministries_activities_titles section_headers">
@@ -63,7 +71,10 @@ const MinistryLayout = ({ data }) => {
   );
 
   const FAQSection = () => (
-    <div className="ministries_faq_section section" id={faq.id.replace('#', '')}>
+    <div
+      className="ministries_faq_section section"
+      id={faq.id.replace("#", "")}
+    >
       <div className="ministries_faq_container container">
         <div className="ministries_faq_wrapper">
           <div className="ministries_faq_header">
@@ -83,18 +94,24 @@ const MinistryLayout = ({ data }) => {
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={activeFaqIndex === index}
                 >
-                  <span className="ministries_faq_question_text">{item.question}</span>
+                  <span className="ministries_faq_question_text">
+                    {item.question}
+                  </span>
                   <RiCloseLine
                     size={28}
                     className={`ministries_faq_icon ${
-                      activeFaqIndex === index ? "ministries_faq_icon--active" : ""
+                      activeFaqIndex === index
+                        ? "ministries_faq_icon--active"
+                        : ""
                     }`}
                   />
                 </button>
 
                 <div
                   className={`ministries_faq_answer ${
-                    activeFaqIndex === index ? "ministries_faq_answer--active" : ""
+                    activeFaqIndex === index
+                      ? "ministries_faq_answer--active"
+                      : ""
                   }`}
                 >
                   <div className="ministries_faq_answer_content">
@@ -111,6 +128,19 @@ const MinistryLayout = ({ data }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{hero.title} | Gospel Revival Wave Church</title>
+        <meta
+          name="description"
+          content={`${subHero.title} - ${hero.title} at Gospel Revival Wave Church.`}
+        />
+        <meta
+          property="og:title"
+          content={`${hero.title} | Gospel Revival Wave Church`}
+        />
+        <meta property="og:description" content={subHero.title} />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <SecondaryNavbar />
       <div className={meta.className}>
         <HeroSection />

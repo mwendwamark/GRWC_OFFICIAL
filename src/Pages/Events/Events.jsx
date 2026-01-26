@@ -2,7 +2,7 @@ import React from "react";
 import "./Events.css";
 import { NavLink } from "react-router-dom";
 import { getImageUrl } from "../../Utils/apiConfig";
-import { Helmet } from "react-helmet";
+
 import { RiCalendar2Line, RiAlarmFill, RiTimeLine } from "@remixicon/react";
 import img from "../../assets/Images/AboutImages/BishopPreaching.webp";
 import SecondaryNavbar from "../../Components/SecondaryNavbar/SecondaryNavbar";
@@ -23,7 +23,7 @@ const Events = ({ events }) => {
       return {
         type: "single",
         day: new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(
-          start
+          start,
         ),
         date: start.toLocaleDateString("en-US", {
           month: "long",
@@ -43,14 +43,14 @@ const Events = ({ events }) => {
       type: "multi",
       duration: daysDiff,
       startDay: new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(
-        start
+        start,
       ),
       startDate: start.toLocaleDateString("en-US", {
         month: "short",
         day: "numeric",
       }),
       endDay: new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(
-        end
+        end,
       ),
       endDate: end.toLocaleDateString("en-US", {
         month: "short",
@@ -67,10 +67,21 @@ const Events = ({ events }) => {
 
   return (
     <>
+      <title>Church Events & Gatherings | Gospel Revival Wave Church</title>
+      <meta
+        name="description"
+        content="Discover upcoming events at Gospel Revival Wave Church. Join us for inspiring gatherings, community events, and opportunities to grow in faith together."
+      />
+      <meta
+        property="og:title"
+        content="Church Events & Gatherings | Gospel Revival Wave Church"
+      />
+      <meta
+        property="og:description"
+        content="Discover upcoming events at Gospel Revival Wave Church. Join us for inspiring gatherings and community events."
+      />
+      <meta property="og:type" content="website" />
       <SecondaryNavbar />
-      <Helmet>
-        <title>Community Events & Gatherings</title>
-      </Helmet>
 
       <div className="events_page_section below_navbar">
         {/* <EventsHero/> */}
@@ -127,7 +138,7 @@ const Events = ({ events }) => {
 
                   const dateInfo = formatDateRange(
                     event.eventDate,
-                    event.eventEndDate
+                    event.eventEndDate,
                   );
 
                   const renderSummary = () => {
@@ -137,7 +148,7 @@ const Events = ({ events }) => {
                     if (Array.isArray(event.eventSummary)) {
                       // Try to extract text from the first paragraph
                       const firstParagraph = event.eventSummary.find(
-                        (p) => p.type === "paragraph" && p.children.length > 0
+                        (p) => p.type === "paragraph" && p.children.length > 0,
                       );
                       if (firstParagraph) {
                         summaryText =

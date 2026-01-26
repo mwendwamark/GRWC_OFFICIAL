@@ -57,7 +57,7 @@ li {
 }
 
 .below_navbar {
-  padding: 10rem 0;
+  padding: 10rem 0 0;
 }
 
 .container {
@@ -267,6 +267,15 @@ li {
 }
 .title_top_white::before {
   background-color: var(--bg_color);
+}
+
+@media screen and (min-width: 2000px) {
+  .container {
+    max-width: 2000px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1200px) {

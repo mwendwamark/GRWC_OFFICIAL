@@ -385,9 +385,9 @@
 
 /* Tablet Styles */
 @media (max-width: 1024px) {
-    .sermon_detail_wrapper{
-        max-width: 95%;
-    }
+  .sermon_detail_wrapper {
+    max-width: 95%;
+  }
   .sermon_detail_hero {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -462,6 +462,12 @@
 
   .sermon_detail_actions {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .sermon_detail_actions .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 

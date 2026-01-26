@@ -75,7 +75,7 @@ const Sermon = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          getFullApiUrl(`api/sermons/${id}?populate=*`)
+          getFullApiUrl(`api/sermons/${id}?populate=*`),
         );
 
         if (!response.ok) {
@@ -126,7 +126,7 @@ const Sermon = () => {
     } catch (err) {
       console.error("Error downloading sermon:", err);
       alert(
-        "There was an error downloading the sermon. Please try again later."
+        "There was an error downloading the sermon. Please try again later.",
       );
     } finally {
       setIsDownloading(false);
@@ -180,7 +180,6 @@ const Sermon = () => {
 
   return (
     <>
-      <SecondaryNavbar />
       <Helmet>
         <title>{sermon.sermonTitle} | Gospel Revival Wave Church</title>
         <meta
@@ -194,8 +193,9 @@ const Sermon = () => {
         />
         {imageUrl && <meta property="og:image" content={imageUrl} />}
       </Helmet>
+      <SecondaryNavbar />
 
-      <div className="sermon_detail_page below_navbar">
+      <div className="sermon_detail_page section">
         <div className="sermon_detail_wrapper container">
           {/* Back Button */}
           <NavLink to="/sermons" className="sermon_detail_back_button">

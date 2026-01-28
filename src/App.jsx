@@ -15,6 +15,7 @@ import Mens from "./Pages/Ministries/Mens/Mens";
 import SundaySchool from "./Pages/Ministries/SundaySchool/SundaySchool";
 import Youngsters from "./Pages/Ministries/Youngsters/Youngsters";
 import Women from "./Pages/Ministries/Women/Women";
+import Choir from "./Pages/Ministries/Choir/Choir";
 import Footer from "./Components/Footer/Footer";
 const App = () => {
   // const {
@@ -65,6 +66,7 @@ const App = () => {
             />
             <Route path="/ministries/kyc" element={<Youngsters />} />
             <Route path="/ministries/women" element={<Women />} />
+            <Route path="/ministries/choir" element={<Choir />} />
           </Routes>
           <Footer />
         </BrowserRouter>

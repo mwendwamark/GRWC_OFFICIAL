@@ -69,6 +69,10 @@
   background-color: #009688; /* Teal */
 }
 
+.choir_subhero {
+  background-color: var(--light_purple); /* Teal */
+}
+
 .ministries_subhero_container {
   display: flex;
   flex-direction: column;

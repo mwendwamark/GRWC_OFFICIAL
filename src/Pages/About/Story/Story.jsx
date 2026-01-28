@@ -1,5 +1,5 @@
 import React from "react";
-import "./Story.css"
+import "./Story.css";
 
 const Story = () => {
   return (
@@ -15,38 +15,36 @@ const Story = () => {
           <div className="about_story_item">
             <h3 className="sub_section_title">How it started </h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              quas, asperiores esse qui repellendus eveniet sint dolor
-              reiciendis ratione voluptatum beatae, est culpa eos tenetur ad
-              mollitia nulla nemo tempore eius excepturi dolores? Quibusdam
-              voluptatem voluptatum impedit, veniam odio assumenda similique
-              atque, ducimus quod fugiat tempora corporis reiciendis quae
-              quisquam, dolor incidunt!
+              Gospel Revival Wave Church began with a divine mandate to bring
+              the light of the Gospel to Kasarani and beyond. What started as a
+              small gathering of faithful believers has been rooted in prayer,
+              the Word, and a passion for souls. From our humble beginnings, we
+              have seen God's hand move mightily, establishing a foundation of
+              faith that continues to stand strong today.
             </p>
           </div>
 
           <div className="about_story_item">
             <h3 className="sub_section_title">How we've grown </h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              quas, asperiores esse qui repellendus eveniet sint dolor
-              reiciendis ratione voluptatum beatae, est culpa eos tenetur ad
-              mollitia nulla nemo tempore eius excepturi dolores? Quibusdam
-              voluptatem voluptatum impedit, veniam odio assumenda similique
-              atque, ducimus quod fugiat tempora corporis reiciendis quae
-              quisquam, dolor incidunt!
+              Over the years, we have witnessed remarkable growth, not just in
+              numbers but in spiritual depth and community impact. God has
+              expanded our territory, allowing us to launch vibrant ministries
+              for men, women, youth, and children. We have seen lives
+              transformed, families restored, and a community knit together by
+              the love of Christ. Our growth is a testament to God's
+              faithfulness and the dedication of our members.
             </p>
           </div>
           <div className="about_story_item">
             <h3 className="sub_section_title">Where we're going </h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              quas, asperiores esse qui repellendus eveniet sint dolor
-              reiciendis ratione voluptatum beatae, est culpa eos tenetur ad
-              mollitia nulla nemo tempore eius excepturi dolores? Quibusdam
-              voluptatem voluptatum impedit, veniam odio assumenda similique
-              atque, ducimus quod fugiat tempora corporis reiciendis quae
-              quisquam, dolor incidunt!
+              As we look to the future, our vision remains clear: to be a beacon
+              of hope and a center for revival in Nairobi. We are committed to
+              expanding our outreach, equipping the next generation of leaders,
+              and deepening our impact in the community. We believe that the
+              best is yet to come as we continue to walk in obedience to the
+              Great Commission, expecting greater waves of God's glory.
             </p>
           </div>
         </div>

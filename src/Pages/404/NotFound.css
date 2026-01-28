@@ -17,6 +17,7 @@
   gap: 1rem;
   align-items: center;
   justify-content: center;
+  padding-bottom: 5rem;
 }
 
 .not_found_container span {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Hero from "./Hero/Hero";
 import Navbar from "../../Components/Navbar/Navbar";
 import Welcome from "./Welcome/Welcome";
@@ -11,22 +12,45 @@ import CTA from "./CTA/CTA";
 const Home = () => {
   return (
     <>
-      <title>
-        Gospel Revival Wave Church | Faith, Community & Transformation
-      </title>
-      <meta
-        name="description"
-        content="Welcome to Gospel Revival Wave Church. Join our community of believers for powerful worship, transformative sermons, and meaningful fellowship. Experience God's love with us."
-      />
-      <meta
-        property="og:title"
-        content="Gospel Revival Wave Church | Faith, Community & Transformation"
-      />
-      <meta
-        property="og:description"
-        content="Join our community of believers for powerful worship, transformative sermons, and meaningful fellowship."
-      />
-      <meta property="og:type" content="website" />
+      <Helmet>
+        <title>
+          Gospel Revival Wave Church | Churches in Nairobi & Kasarani
+        </title>
+        <meta
+          name="description"
+          content="Welcome to Gospel Revival Wave Church, a vibrant community in Kasarani, Nairobi. Join us for powerful worship, transformative sermons, and meaningful fellowship. One of the best churches around Nairobi."
+        />
+        <meta
+          name="keywords"
+          content="Churches around Nairobi, Churches around Kasarani, Gospel Revival Wave Church, Church in Nairobi, Church in Kasarani, Worship in Nairobi, Pentecostal Churches Nairobi"
+        />
+        <meta
+          property="og:title"
+          content="Gospel Revival Wave Church | Churches in Nairobi & Kasarani"
+        />
+        <meta
+          property="og:description"
+          content="Join Gospel Revival Wave Church in Kasarani, Nairobi. A community of believers for powerful worship and transformative sermons."
+        />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Church",
+              "name": "Gospel Revival Wave Church",
+              "url": "https://grwc.vercel.app/",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kasarani",
+                "addressRegion": "Nairobi",
+                "addressCountry": "KE"
+              },
+              "description": "Welcome to Gospel Revival Wave Church. Join our community of believers for powerful worship, transformative sermons, and meaningful fellowship."
+            }
+          `}
+        </script>
+      </Helmet>
       <div className="home_page_container">
         <Navbar />
         <Hero />

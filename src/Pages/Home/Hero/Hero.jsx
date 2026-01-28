@@ -1,4 +1,3 @@
-
 import React from "react";
 import HomeHeroImg from "../../../assets/Images/HomeImages/BishopPreaching.webp";
 import "./Hero.css";
@@ -11,7 +10,7 @@ const Hero = () => {
     <section className="home_hero_section">
       <img
         src={HomeHeroImg}
-        alt="Bishop James Irreri James Preaching In Gospel Revival Wave Church"
+        alt="Bishop James Irreri James Preaching In Gospel Revival Wave Church in Kasarani, Nairobi"
         className="home_hero_bg_img"
         loading="eager"
       />
@@ -28,17 +27,16 @@ const Hero = () => {
           <p>
             Be part of a growing community dedicated to building faith, hope,
             and love. 'And let us consider how to stir up one another to love
-            and good works, not neglecting to meet together.' – Hebrews
-            10:24-25
+            and good works, not neglecting to meet together.' – Hebrews 10:24-25
           </p>
 
           <div className="home_hero_buttons">
             <NavLink to="/about" className="btn btn_purple">
-              Visit Us <RiArrowRightUpLongLine size={15}/>
+              Visit Us <RiArrowRightUpLongLine size={15} />
             </NavLink>
 
             <NavLink to="/sermons" className="btn btn_outline">
-              Watch Sermons <RiPlayCircleFill size={15}/>
+              Watch Sermons <RiPlayCircleFill size={15} />
             </NavLink>
           </div>
         </div>

@@ -35,7 +35,7 @@ const Contacts = () => {
               closeOnClick: true,
               pauseOnHover: true,
               draggable: true,
-            }
+            },
           );
           // Reset form after successful submission
           e.target.reset();
@@ -52,7 +52,7 @@ const Contacts = () => {
             draggable: true,
           });
           console.error("EmailJS Error:", error);
-        }
+        },
       );
   };
 
@@ -73,8 +73,8 @@ const Contacts = () => {
       <div className="home_contacts_container container">
         <div className="home_contacts_headers section_headers">
           <strong className="title_top title_top_faint">get in touch</strong>
-          <h2 className="section_title">
-            Reach out to us for a prayer request or any inquiries
+          <h2 className="section_title home_contacts_title">
+            Reach out to Gospel Revival Wave Church in Kasarani, Nairobi
           </h2>
         </div>
 

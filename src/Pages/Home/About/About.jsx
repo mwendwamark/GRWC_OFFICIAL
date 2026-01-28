@@ -19,10 +19,12 @@ const About = () => {
           <div className="home_about_description ">
             <div className="home_about_brief width_80">
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
-                odio optio nihil nisi neque esse laboriosam voluptatem unde
-                officiis modi facere cupiditate consequatur distinctio magnam,
-                at ducimus autem veritatis voluptatibus. Quas, fugit cum!
+                Gospel Revival Wave Church is a spirit-filled ministry located
+                in the heart of Kasarani, Nairobi. We are dedicated to spreading
+                the Gospel of Jesus Christ and empowering believers to live
+                victorious lives. Whether you are looking for a church in
+                Nairobi or a supportive community in Kasarani, you are welcome
+                here.
               </p>
 
               <NavLink
@@ -38,18 +40,18 @@ const About = () => {
               <div className="home_mission">
                 <h3 className="sub_section_title">Our Mission</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Libero quae, sapiente sequi fugit nisi sint obcaecati. Iusto
-                  repudiandae rerum esse ad nam minima consectetur.
+                  To reach the unreached in Nairobi and beyond with the
+                  life-changing message of the Gospel, discipling them to become
+                  mature followers of Christ who impact their world.
                 </p>
               </div>
 
               <div className="home_vision">
                 <h3 className="sub_section_title">Our Vision</h3>
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Tempora, vel? Quam veritatis et minima nemo eaque voluptas
-                  tempore sequi, corporis dolorem commodi quibusdam repudiandae.
+                  To be a beacon of hope and revival in Kasarani, raising a
+                  generation of believers who walk in the power of the Holy
+                  Spirit and demonstrate God's love to the nations.
                 </p>
               </div>
             </div>

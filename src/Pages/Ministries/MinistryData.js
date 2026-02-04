@@ -224,7 +224,7 @@ export const choirMinistryData = {
   },
   hero: {
     icon: RiMusic2Line,
-    title: "Choir Ministry",
+    title: "Revival Wave Sounds",
     image: ChoirImage,
     imageAlt: "GRWC Choir",
     faqLink: "#choir_faqs",

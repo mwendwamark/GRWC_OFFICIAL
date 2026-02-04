@@ -31,7 +31,7 @@ const Hero = () => {
           </p>
 
           <div className="home_hero_buttons">
-            <NavLink to="/about" className="btn btn_purple">
+            <NavLink to="/visit_us" className="btn btn_purple">
               Visit Us <RiArrowRightUpLongLine size={15} />
             </NavLink>
 

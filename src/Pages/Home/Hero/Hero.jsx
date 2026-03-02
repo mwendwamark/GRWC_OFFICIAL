@@ -13,6 +13,9 @@ const Hero = () => {
         alt="Bishop James Irreri James Preaching In Gospel Revival Wave Church in Kasarani, Nairobi"
         className="home_hero_bg_img"
         loading="eager"
+        width="1920"
+        height="1281"
+        fetchpriority="high"
       />
       <div className="home_hero_overlay">
         <div className="home_hero_headers">

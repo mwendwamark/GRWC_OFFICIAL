@@ -145,7 +145,12 @@ const Navbar = () => {
               to="/"
               className="navbar__logo"
             >
-              <img src={Logo} alt="Logo" />
+              <img
+                src={Logo}
+                alt="Gospel Revival Wave Church Logo"
+                width="80"
+                height="79"
+              />
             </NavLink>
 
             <div className="navbar__right">

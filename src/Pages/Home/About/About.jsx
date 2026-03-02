@@ -29,11 +29,10 @@ const About = () => {
 
               <NavLink
                 to="/about"
-                aria-label="Go to about page"
+                aria-label="Learn more about Gospel Revival Wave Church"
                 className="btn btn_black"
               >
-                {" "}
-                read more <RiArrowRightLongLine size={15} />
+                Learn more about our church <RiArrowRightLongLine size={15} />
               </NavLink>
             </div>
             <div className="home_mission_vision">

@@ -42,7 +42,7 @@
 }
 
 .footer_links li a {
-  color: var(--text_color);
+  color: #3a3a3a;
   transition: 0.4s;
 }
 
@@ -84,7 +84,7 @@
 }
 
 .footer_copyright span {
-  color: var(--text_color);
+  color: #333333;
 }
 
 .footer_made_by {
@@ -93,7 +93,7 @@
   padding-top: 2rem;
 }
 .footer_made_by a {
-  color: var(--text_color);
+  color: #333333;
   transition: 0.4s;
 }
 

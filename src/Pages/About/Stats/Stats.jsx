@@ -10,7 +10,7 @@ const Stats = () => {
             <p>Members</p>
         </div>
         <div className="stat_item">
-            <h1 className="hero_title">12 +</h1>
+            <h1 className="hero_title">30 +</h1>
             <p>Branches</p>
         </div>
         <div className="stat_item">

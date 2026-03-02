@@ -1,13 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Events.css";
 import { NavLink } from "react-router-dom";
-import { getImageUrl } from "../../Utils/apiConfig";
+import { getFullApiUrl, getImageUrl } from "../../Utils/apiConfig";
 
 import { RiCalendar2Line, RiAlarmFill, RiTimeLine } from "@remixicon/react";
 import img from "../../assets/Images/AboutImages/BishopPreaching.webp";
 import SecondaryNavbar from "../../Components/SecondaryNavbar/SecondaryNavbar";
-const Events = ({ events }) => {
-  const eventsArray = Array.isArray(events) ? events : [];
+
+const Events = () => {
+  const [eventsArray, setEventsArray] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const fetchEvents = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(
+          getFullApiUrl("api/church-events?populate=*"),
+          { signal: controller.signal },
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch events");
+        }
+
+        const data = await response.json();
+        setEventsArray(data.data || []);
+      } catch (err) {
+        if (!controller.signal.aborted) {
+          setError(err.message);
+        }
+      } finally {
+        if (!controller.signal.aborted) {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchEvents();
+
+    return () => controller.abort();
+  }, []);
 
   // Helper function to format date range
   const formatDateRange = (startDate, endDate) => {
@@ -120,7 +156,16 @@ const Events = ({ events }) => {
               <h2 className="section_title">Upcoming events</h2>
             </div>
             <div className="events_page_grid">
-              {eventsArray.length === 0 ? (
+              {loading ? (
+                <div className="events_page_loading">
+                  <div className="sermons_page_loading_spinner"></div>
+                  <p>Loading events...</p>
+                </div>
+              ) : error ? (
+                <p className="events_page_no_events">
+                  Unable to load events at this time. Please try again later.
+                </p>
+              ) : eventsArray.length === 0 ? (
                 <p className="events_page_no_events">
                   No upcoming events at this time. Check back soon!
                 </p>

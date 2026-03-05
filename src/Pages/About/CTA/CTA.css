@@ -1,5 +1,5 @@
 .about_CTA_section {
-  background-color: var(--light_purple);
+  /* background-color: var(--light_purple); */
   padding: 0 0 8rem 0;
   position: relative;
   margin-top: -8rem;
@@ -13,7 +13,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  transform: translateY(-12rem);
+  transform: translateY(-8rem);
 }
 
 .about_CTA_images img {

@@ -23,7 +23,7 @@ const Hero = () => {
             Gospel Revival <br /> Wave Church
           </h1>
           <p className="home_hero_subtitle">
-            Preaching Jesus Christ the Desire of All Nations
+            Preaching JESUS CHRIST the Desire of All Nations{" "}
           </p>
         </div>
         <div className="home_hero_invite_text">

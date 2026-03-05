@@ -19,12 +19,13 @@ const About = () => {
           <div className="home_about_description ">
             <div className="home_about_brief width_80">
               <p>
-                Gospel Revival Wave Church is a spirit-filled ministry located
-                in the heart of Kasarani, Nairobi. We are dedicated to spreading
-                the Gospel of Jesus Christ and empowering believers to live
-                victorious lives. Whether you are looking for a church in
-                Nairobi or a supportive community in Kasarani, you are welcome
-                here.
+                Gospel Revival Wave Church (GRWC) is an
+                Evangelical/Pentecostal/Charismatic Church with its Headquarters
+                at Kasarani Estate in the outskirts of Nairobi City, Kenya –
+                East Africa. Founded on 29th October 1995 by Bishop Jesse Ireri
+                James and his wife Reverend Rose M. Ireri. We are a vibrant
+                family of faith celebrating 30 years of victory and God’s
+                faithfulness.
               </p>
 
               <NavLink
@@ -32,25 +33,25 @@ const About = () => {
                 aria-label="Learn more about Gospel Revival Wave Church"
                 className="btn btn_black"
               >
-                Learn more about our church <RiArrowRightLongLine size={15} />
+                Learn more
+                <RiArrowRightLongLine size={15} />
               </NavLink>
             </div>
             <div className="home_mission_vision">
               <div className="home_mission">
                 <h3 className="sub_section_title">Our Mission</h3>
                 <p>
-                  To reach the unreached in Nairobi and beyond with the
-                  life-changing message of the Gospel, discipling them to become
-                  mature followers of Christ who impact their world.
+                  To see a mighty Revival Wave sweep across the nations, with
+                  Kasarani healed and transformed as the springboard of revival.
                 </p>
               </div>
 
               <div className="home_vision">
                 <h3 className="sub_section_title">Our Vision</h3>
                 <p>
-                  To be a beacon of hope and revival in Kasarani, raising a
-                  generation of believers who walk in the power of the Holy
-                  Spirit and demonstrate God's love to the nations.
+                  Preaching JESUS CHRIST the Desire of All Nations and spreading
+                  Revival Fire to the ends of the earth through the Global
+                  Revival Wave Movement.
                 </p>
               </div>
             </div>

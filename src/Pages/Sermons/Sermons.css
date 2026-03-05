@@ -243,6 +243,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
+  padding: 5rem 0;
 }
 
 .sermons_page_card {

@@ -10,7 +10,7 @@ const Established = () => {
             established in 1995
           </strong>
           <h2 className="section_title">
-            We Love God and Preaching Jesus Christ the Desire of All Nations
+            We Love God and Preaching JESUS CHRIST the Desire of All Nations
           </h2>
         </div>
       </div>

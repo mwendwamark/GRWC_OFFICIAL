@@ -333,7 +333,7 @@ const Sermons = () => {
             </div>
 
             {/* Sermons Grid */}
-            <div className="sermons_page_grid">
+            <div className="sermons_page_grid small_section">
               {filteredSermons.length === 0 ? (
                 <p className="sermons_page_no_results">
                   No sermons found. Try adjusting your filters.

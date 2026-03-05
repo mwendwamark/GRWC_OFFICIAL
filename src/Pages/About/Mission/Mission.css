@@ -1,0 +1,96 @@
+.about_mission_vision_section {
+  padding: 10rem 0;
+}
+
+.about_mission_vision_tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 3rem 0 2rem;
+  background-color: var(--white_alt_color);
+  padding: 0.2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--light_purple);
+  width: fit-content;
+}
+
+.about_mission_vision_tab {
+  background-color: var(--white_alt_color);
+  color: var(--title_color);
+  border-radius: 9999px;
+  padding: 0.5rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: var(--title_ff);
+  transition: all 0.3s ease-in-out;
+}
+
+.about_mission_vision_tab:hover {
+  background-color: var(--light_purple);
+  color: var(--purple_color);
+}
+
+.about_mission_vision_tab_active {
+  background-color: var(--purple_color);
+  color: var(--bg_color);
+}
+
+.about_mission_vision_tab_active:hover {
+  background-color: var(--purple_color);
+  color: var(--bg_color);
+  opacity: 0.9;
+}
+
+.about_mission_vision_content {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: var(--text_color);
+}
+
+.about_mission_vision_mandate {
+  margin-top: 2rem;
+}
+
+.about_mission_vision_mandate_title {
+  font-weight: 700;
+  color: var(--title_color);
+  margin-bottom: 0.3rem;
+}
+
+.about_mission_vision_mandate_item {
+  margin-top: 1.5rem;
+}
+
+.about_mission_vision_mandate_item p {
+  margin-top: 0.3rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .about_mission_vision_section {
+    padding: 4.5rem 0;
+  }
+
+  .about_mission_vision_tabs {
+    margin: 2rem 0 1.5rem;
+  }
+
+  .about_mission_vision_tab {
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+  }
+
+  .about_mission_vision_content {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about_mission_vision_tab {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+  }
+}

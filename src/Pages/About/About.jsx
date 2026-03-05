@@ -7,6 +7,7 @@ import Beliefs from "./Beliefs/Beliefs";
 import Navbar from "../../Components/Navbar/Navbar";
 import Team from "./Team/Team";
 import CTA from "./CTA/CTA";
+import Mission from "./Mission/Mission";
 
 const About = () => {
   return (
@@ -29,6 +30,7 @@ const About = () => {
       <AboutHero />
       <Established />
       <Story />
+      <Mission/>
       <Stats />
       <Beliefs />
       <Team />

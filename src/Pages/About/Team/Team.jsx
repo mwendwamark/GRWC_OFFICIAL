@@ -1,7 +1,7 @@
 import React from "react";
 import "./Team.css";
 import { AboutLeaders } from "../../../assets/Data/Leaders/AboutLeaders";
-import { RiArrowRightLongLine } from "@remixicon/react";
+import { RiArrowRightLongLine, RiUserLine } from "@remixicon/react";
 
 const Team = () => {
   return (
@@ -16,12 +16,18 @@ const Team = () => {
           {AboutLeaders.map((leader, index) => (
             <div key={index} className="team_member">
               <div className="team_member_image_wrapper">
-                <img
-                  src={leader.leaderImage}
-                  alt={leader.leaderName}
-                  className="team_member_image"
-                  loading="lazy"
-                />
+                {leader.leaderImage ? (
+                  <img
+                    src={leader.leaderImage}
+                    alt={leader.leaderName}
+                    className="team_member_image"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="team_member_icon_placeholder">
+                    <RiUserLine size={64} />
+                  </div>
+                )}
               </div>
               <div className="team_member_info">
                 <h3 className="team_member_name">{leader.leaderName}</h3>

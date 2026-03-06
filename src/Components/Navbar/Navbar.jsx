@@ -2,18 +2,65 @@ import { useEffect, useState } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import Logo from "../../../public/Logo.webp";
-import { RiMenu3Line } from "@remixicon/react";
-import { RiCloseLine } from "@remixicon/react";
-import { RiArrowDownSLine } from "@remixicon/react";
-import { RiMusic2Fill } from "@remixicon/react";
-import { RiTeamFill } from "@remixicon/react";
-import { RiWomenFill } from "@remixicon/react";
-import { RiUserHeartFill } from "@remixicon/react";
-import { RiShakeHandsFill } from "@remixicon/react";
-import { RiCameraFill } from "@remixicon/react";
-import { RiHandHeartFill } from "@remixicon/react";
-import { RiBook3Fill } from "@remixicon/react";
-import { RiMapPinFill } from "@remixicon/react";
+import { RiMenu3Line, RiCloseLine, RiArrowDownSLine } from "@remixicon/react";
+
+const ministriesCategories = [
+  {
+    category: "Worship & Arts",
+    links: [
+      { name: "Music Ministry", path: "/ministries/choir" },
+    ],
+  },
+  {
+    category: "Men & Women",
+    links: [
+      { name: "Men of Value", path: "/ministries/men" },
+      { name: "Revival Wave Queens", path: "/ministries/women" },
+    ],
+  },
+  {
+    category: "Next Generation",
+    links: [
+      { name: "Youth Fellowship", path: "/ministries/youth" },
+      { name: "Youngsters (KYC)", path: "/ministries/kyc" },
+      { name: "Sunday School Eagles", path: "/ministries/sunday_school" },
+    ],
+  },
+  {
+    category: "Outreach & Growth",
+    links: [
+      { name: "Evangelism", path: "/ministries/evangelism" },
+      { name: "Discipleship", path: "/ministries/discipleship" },
+      { name: "Intercession", path: "/ministries/intercession" },
+    ],
+  },
+  {
+    category: "Community & Support",
+    links: [
+      { name: "Welfare", path: "/ministries/welfare" },
+      { name: "Home Cell Fellowships", path: "/ministries/homecell" },
+      { name: "Hospitality", path: "/ministries/hospitality" },
+      { name: "Greeters", path: "/ministries/greeters" },
+    ],
+  },
+  {
+    category: "Operations",
+    links: [
+      { name: "Ushering", path: "/ministries/ushering" },
+      { name: "Security", path: "/ministries/security" },
+      { name: "Protocol", path: "/ministries/protocol" },
+      { name: "Cleaning & Beautification", path: "/ministries/cleaning" },
+      { name: "Bookshop & Library", path: "/ministries/bookshop" },
+    ],
+  },
+];
+
+const branchesLinks = [
+  { name: "Downtown Branch", path: "/branches/downtown" },
+  { name: "Westside Branch", path: "/branches/westside" },
+  { name: "Northside Branch", path: "/branches/northside" },
+  { name: "Eastside Branch", path: "/branches/eastside" },
+];
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,91 +73,44 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      if (currentScrollY > 100) setScrolled(true);
+      else setScrolled(false);
 
-      // Determine if navbar should have backdrop blur and color change
-      if (currentScrollY > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-
-      // Show/hide navbar based on scroll direction
-      if (currentScrollY > lastScrollY && currentScrollY > 150) {
-        // Scrolling down & past threshold - hide navbar
-        setVisible(false);
-      } else {
-        // Scrolling up - show navbar
-        setVisible(true);
-      }
+      if (currentScrollY > lastScrollY && currentScrollY > 150) setVisible(false);
+      else setVisible(true);
 
       setLastScrollY(currentScrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1001);
-    };
+    const handleResize = () => setIsMobile(window.innerWidth < 1001);
     window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
     setActiveDropdown(null);
   };
-
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
     setActiveDropdown(null);
   };
-
-  const handleDropdownEnter = (dropdownName) => {
-    if (!isMobile) {
-      setActiveDropdown(dropdownName);
-    }
+  const handleDropdownEnter = (name) => {
+    if (!isMobile) setActiveDropdown(name);
   };
-
   const handleDropdownLeave = () => {
-    if (!isMobile) {
-      setActiveDropdown(null);
-    }
+    if (!isMobile) setActiveDropdown(null);
+  };
+  const toggleMobileDropdown = (name) => {
+    if (isMobile) setActiveDropdown(activeDropdown === name ? null : name);
   };
 
-  const toggleMobileDropdown = (dropdownName) => {
-    if (isMobile) {
-      setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
-    }
-  };
-
-  const ministriesLinks = [
-    { name: "Choir", path: "/ministries/choir", icon: RiMusic2Fill },
-    { name: "Men's", path: "/ministries/men", icon: RiTeamFill },
-    { name: "Women's", path: "/ministries/women", icon: RiWomenFill },
-    { name: "Youth", path: "/ministries/youth", icon: RiUserHeartFill },
-    { name: "Youngster's", path: "/ministries/kyc", icon: RiShakeHandsFill },
-    { name: "Media", path: "/ministries/media", icon: RiCameraFill },
-    { name: "Ushers", path: "/ministries/usehring", icon: RiHandHeartFill },
-    {
-      name: "Sunday School",
-      path: "/ministries/sunday_school",
-      icon: RiBook3Fill,
-    },
-  ];
-
-  const branchesLinks = [
-    { name: "Downtown Branch", path: "/branches/downtown" },
-    { name: "Westside Branch", path: "/branches/westside" },
-    { name: "Northside Branch", path: "/branches/northside" },
-    { name: "Eastside Branch", path: "/branches/eastside" },
-  ];
+  // Flatten all ministry links for the mobile submenu
+  const allMinistriesLinks = ministriesCategories.flatMap((c) => c.links);
 
   const renderMobileSubmenu = (type, links) => {
     if (!isMobile || activeDropdown !== type) return null;
@@ -135,9 +135,7 @@ const Navbar = () => {
     <>
       <header className="header">
         <nav
-          className={`navbar ${scrolled ? "navbar--scrolled" : ""} ${
-            !visible ? "navbar--hidden" : ""
-          }`}
+          className={`navbar ${scrolled ? "navbar--scrolled" : ""} ${!visible ? "navbar--hidden" : ""}`}
         >
           <div className="navbar__container container">
             <NavLink
@@ -155,18 +153,14 @@ const Navbar = () => {
 
             <div className="navbar__right">
               <ul
-                className={`navbar__menu ${
-                  mobileMenuOpen ? "navbar__menu--active" : ""
-                }`}
+                className={`navbar__menu ${mobileMenuOpen ? "navbar__menu--active" : ""}`}
               >
                 <li className="navbar__menu-item">
                   <NavLink
                     aria-label="Go to Home page"
                     to="/"
                     onClick={closeMobileMenu}
-                    className={`navbar__menu-link ${
-                      scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""
-                    }`}
+                    className={`navbar__menu-link ${scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""}`}
                   >
                     Home
                   </NavLink>
@@ -176,9 +170,7 @@ const Navbar = () => {
                     aria-label="Go to About page"
                     to="/about"
                     onClick={closeMobileMenu}
-                    className={`navbar__menu-link ${
-                      scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""
-                    }`}
+                    className={`navbar__menu-link ${scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""}`}
                   >
                     About
                   </NavLink>
@@ -191,26 +183,16 @@ const Navbar = () => {
                   onMouseLeave={handleDropdownLeave}
                 >
                   <button
-                    className={`navbar__menu-link navbar__menu-link--dropdown ${
-                      scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""
-                    }`}
+                    className={`navbar__menu-link navbar__menu-link--dropdown ${scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""}`}
                     onClick={() => toggleMobileDropdown("ministries")}
                   >
                     Ministries
                     <RiArrowDownSLine
                       size={16}
-                      className={`navbar__dropdown-icon ${
-                        activeDropdown === "ministries"
-                          ? "navbar__dropdown-icon--active"
-                          : ""
-                      } ${
-                        scrolled && !isMobile
-                          ? "navbar__dropdown-icon--scrolled"
-                          : ""
-                      }`}
+                      className={`navbar__dropdown-icon ${activeDropdown === "ministries" ? "navbar__dropdown-icon--active" : ""} ${scrolled && !isMobile ? "navbar__dropdown-icon--scrolled" : ""}`}
                     />
                   </button>
-                  {renderMobileSubmenu("ministries", ministriesLinks)}
+                  {renderMobileSubmenu("ministries", allMinistriesLinks)}
                 </li>
 
                 <li className="navbar__menu-item">
@@ -218,9 +200,7 @@ const Navbar = () => {
                     aria-label="Go to Sermons page"
                     to="/sermons"
                     onClick={closeMobileMenu}
-                    className={`navbar__menu-link ${
-                      scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""
-                    }`}
+                    className={`navbar__menu-link ${scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""}`}
                   >
                     Sermons
                   </NavLink>
@@ -230,9 +210,7 @@ const Navbar = () => {
                     aria-label="Go to Events page"
                     to="/events"
                     onClick={closeMobileMenu}
-                    className={`navbar__menu-link ${
-                      scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""
-                    }`}
+                    className={`navbar__menu-link ${scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""}`}
                   >
                     Events
                   </NavLink>
@@ -245,23 +223,13 @@ const Navbar = () => {
                   onMouseLeave={handleDropdownLeave}
                 >
                   <button
-                    className={`navbar__menu-link navbar__menu-link--dropdown ${
-                      scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""
-                    }`}
+                    className={`navbar__menu-link navbar__menu-link--dropdown ${scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""}`}
                     onClick={() => toggleMobileDropdown("branches")}
                   >
                     Branches
                     <RiArrowDownSLine
                       size={16}
-                      className={`navbar__dropdown-icon ${
-                        activeDropdown === "branches"
-                          ? "navbar__dropdown-icon--active"
-                          : ""
-                      } ${
-                        scrolled && !isMobile
-                          ? "navbar__dropdown-icon--scrolled"
-                          : ""
-                      }`}
+                      className={`navbar__dropdown-icon ${activeDropdown === "branches" ? "navbar__dropdown-icon--active" : ""} ${scrolled && !isMobile ? "navbar__dropdown-icon--scrolled" : ""}`}
                     />
                   </button>
                   {renderMobileSubmenu("branches", branchesLinks)}
@@ -272,9 +240,7 @@ const Navbar = () => {
                     aria-label="Go to Give page"
                     to="/give"
                     onClick={closeMobileMenu}
-                    className={`navbar__menu-link ${
-                      scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""
-                    }`}
+                    className={`navbar__menu-link ${scrolled && !isMobile ? "navbar__menu-link--scrolled" : ""}`}
                   >
                     Give
                   </NavLink>
@@ -299,70 +265,52 @@ const Navbar = () => {
                 {mobileMenuOpen ? (
                   <RiCloseLine
                     size={35}
-                    className={`navbar__hamburger-icon ${
-                      scrolled ? "navbar__hamburger-icon--scrolled" : ""
-                    }`}
+                    className={`navbar__hamburger-icon ${scrolled ? "navbar__hamburger-icon--scrolled" : ""}`}
                   />
                 ) : (
                   <RiMenu3Line
                     size={35}
-                    className={`navbar__hamburger-icon ${
-                      scrolled ? "navbar__hamburger-icon--scrolled" : ""
-                    }`}
+                    className={`navbar__hamburger-icon ${scrolled ? "navbar__hamburger-icon--scrolled" : ""}`}
                   />
                 )}
               </button>
             </div>
           </div>
 
-          {/* Desktop-only Ministries Dropdown Menu */}
+          {/* Desktop Dropdowns */}
           {!isMobile && (
             <>
+              {/* Ministries Mega Menu */}
               <div
-                className={`navbar__dropdown navbar__ministries-dropdown ${
-                  activeDropdown === "ministries"
-                    ? "navbar__dropdown--active"
-                    : ""
-                }`}
+                className={`navbar__dropdown navbar__ministries-dropdown ${activeDropdown === "ministries" ? "navbar__dropdown--active" : ""}`}
                 onMouseEnter={() => handleDropdownEnter("ministries")}
                 onMouseLeave={handleDropdownLeave}
               >
-                <div className="navbar__dropdown-container container">
-                  <div className="navbar__dropdown-grid">
-                    {ministriesLinks.map((link, index) => {
-                      const IconComponent = link.icon;
-                      return (
-                        <NavLink
-                          key={index}
-                          to={link.path}
-                          className="navbar__dropdown-item"
-                          onClick={closeMobileMenu}
-                        >
-                          <div className="navbar__dropdown-item-icon">
-                            <IconComponent
-                              size={40}
-                              className="ministry-icon"
-                            />
-                          </div>
-                          <div className="navbar__dropdown-item-content">
-                            <span className="navbar__dropdown-item-title">
+                <div className="navbar__mega-inner container">
+                  {ministriesCategories.map((group, i) => (
+                    <div key={i} className="navbar__mega-col">
+                      <span className="navbar__mega-heading">{group.category}</span>
+                      <ul className="navbar__mega-list">
+                        {group.links.map((link, j) => (
+                          <li key={j}>
+                            <NavLink
+                              to={link.path}
+                              className="navbar__mega-link"
+                              onClick={closeMobileMenu}
+                            >
                               {link.name}
-                            </span>
-                          </div>
-                        </NavLink>
-                      );
-                    })}
-                  </div>
+                            </NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Desktop-only Branches Dropdown Menu */}
+              {/* Branches Dropdown */}
               <div
-                className={`navbar__dropdown navbar__branches-dropdown ${
-                  activeDropdown === "branches"
-                    ? "navbar__dropdown--active"
-                    : ""
-                }`}
+                className={`navbar__dropdown navbar__branches-dropdown ${activeDropdown === "branches" ? "navbar__dropdown--active" : ""}`}
                 onMouseEnter={() => handleDropdownEnter("branches")}
                 onMouseLeave={handleDropdownLeave}
               >
@@ -375,16 +323,9 @@ const Navbar = () => {
                         className="navbar__dropdown-item"
                         onClick={closeMobileMenu}
                       >
-                        <div className="navbar__dropdown-item-icon">
-                          <RiMapPinFill size={40} className="branch-icon" />
-                        </div>
                         <div className="navbar__dropdown-item-content">
-                          <span className="navbar__dropdown-item-label">
-                            BRANCH
-                          </span>
-                          <span className="navbar__dropdown-item-title">
-                            {link.name}
-                          </span>
+                          <span className="navbar__dropdown-item-label">BRANCH</span>
+                          <span className="navbar__dropdown-item-title">{link.name}</span>
                         </div>
                       </NavLink>
                     ))}

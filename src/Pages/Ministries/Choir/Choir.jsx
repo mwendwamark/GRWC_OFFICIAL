@@ -1,9 +1,9 @@
 import React from "react";
 import MinistryLayout from "../MinistryLayout";
-import { choirMinistryData } from "../MinistryData";
+import { musicMinistryData } from "../MinistryData";
 
 const Choir = () => {
-  return <MinistryLayout data={choirMinistryData} />;
+  return <MinistryLayout data={musicMinistryData} />;
 };
 
 export default Choir;

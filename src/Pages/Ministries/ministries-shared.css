@@ -49,9 +49,6 @@
 }
 
 /* SubHero Section Styles */
-.ministries_subhero {
-  /* background-color: rgb(8, 94, 66); */
-}
 
 .mens_subhero {
   background-color: rgb(8, 94, 66);
@@ -69,8 +66,119 @@
   background-color: #009688; /* Teal */
 }
 
-.choir_subhero {
-  background-color: var(--light_purple); /* Teal */
+.music_hero_icon {
+  color: var(--light_purple);
+}
+
+.choir_subhero,
+.music_subhero {
+  background-color: var(--light_purple);
+}
+
+/* ── New ministry subHero backgrounds & Icon colors ────────────────────────── */
+
+/* Youth Fellowship — bold crimson */
+.youth_subhero {
+  background-color: #b91c1c;
+}
+.youth_hero_icon {
+  color: #b91c1c;
+}
+
+/* Evangelism — deep forest green */
+.evangelism_subhero {
+  background-color: #166534;
+}
+.evangelism_hero_icon {
+  color: #166534;
+}
+
+/* Discipleship — rich indigo */
+.discipleship_subhero {
+  background-color: #3730a3;
+}
+.discipleship_hero_icon {
+  color: #3730a3;
+}
+
+/* Intercession — deep teal */
+.intercession_subhero {
+  background-color: #0f766e;
+}
+.intercession_hero_icon {
+  color: #0f766e;
+}
+
+/* Ushering — slate-blue */
+.ushering_subhero {
+  background-color: #1e40af;
+}
+.ushering_hero_icon {
+  color: #1e40af;
+}
+
+/* Security — dark charcoal-teal */
+.security_subhero {
+  background-color: #134e4a;
+}
+.security_hero_icon {
+  color: #134e4a;
+}
+
+/* Protocol — warm burgundy */
+.protocol_subhero {
+  background-color: #7f1d1d;
+}
+.protocol_hero_icon {
+  color: #7f1d1d;
+}
+
+/* Hospitality — warm amber-brown */
+.hospitality_subhero {
+  background-color: #92400e;
+}
+.hospitality_hero_icon {
+  color: #92400e;
+}
+
+/* Greeters — ocean blue */
+.greeters_subhero {
+  background-color: #075985;
+}
+.greeters_hero_icon {
+  color: #075985;
+}
+
+/* Welfare — emerald green */
+.welfare_subhero {
+  background-color: #065f46;
+}
+.welfare_hero_icon {
+  color: #065f46;
+}
+
+/* Cleaning & Beautification — deep cyan */
+.cleaning_subhero {
+  background-color: #164e63;
+}
+.cleaning_hero_icon {
+  color: #164e63;
+}
+
+/* Bookshop & Library — plum purple */
+.bookshop_subhero {
+  background-color: #581c87;
+}
+.bookshop_hero_icon {
+  color: #581c87;
+}
+
+/* Home Cell Fellowships — warm dark rose */
+.homecell_subhero {
+  background-color: #881337;
+}
+.homecell_hero_icon {
+  color: #881337;
 }
 
 .ministries_subhero_container {
@@ -194,7 +302,9 @@
 .ministries_faq_answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease;
 }
 
 .ministries_faq_answer--active {
